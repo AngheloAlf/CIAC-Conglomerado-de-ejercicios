@@ -1,0 +1,71 @@
+\section{Andrónico Bank (C3 CC 2015-II)}
+
+  Andrónico Bank es un banco muy humilde
+  que hasta hace poco usaban solo papel y lápiz
+  para manejar toda la información de sus clientes,
+  también humildes.
+  Como una manera de mejorar sus procesos,
+  Andrónico Bank quiere utilizar un sistema computacional
+  basado en Python.
+  Por eso se traspasa la información de sus clientes
+  a un archivo de texto,
+  indicando su rut,
+  nombre y clase cliente.
+  el archivo \texttt{clientes.txt}
+  es un \emph{ejemplo} de lo anterior.
+  A usted se le pide lo siguiente:
+  
+  \begin{lstlisting}[style = consola, caption = \texttt{clientes.txt}]
+  9234539-9;Sebastian Davalos;VIP
+  11231709-k;Choclo Delano;Pendiente
+  5555555-6;Sebastian Pinera;VIP
+  9999999-k;Gladis Maryn;RIP
+  12312312-1;Michel Bachelet;VIP
+  8888888-8;Companero Yuri;Estandar
+  7987655-1;Sergio Estandarte;RIP
+  \end{lstlisting}
+  
+  \begin{itemize}
+  \item[a)]
+    Escriba la función
+    \texttt{buscar\_clientes(archivo, clase)}
+    que reciba como parámetros el nombre del archivo
+    y una clase,
+    y retorne un diccionario con los rut
+    de los clientes como llaves
+    y los nombres como valor de todos los clientes
+    pertenecientes a la clase entregada como parámetro.
+    
+    \begin{lstlisting}[style = consola]
+    >>> [*buscar_clientes('clientes.txt', 'Pendiente') *]
+    {'11231709-k': 'Choclo Delano'}
+    \end{lstlisting}
+  \item[b)]
+    Escriba una función
+    \texttt{dar\_credito(archivo, rut)}
+    que reciba como parámetros
+    el nombre del archivo de clientes
+    y el \texttt{rut} de un cliente,
+    y que retorne \texttt{True}
+    si éste es \emph{VIP} o 
+    \texttt{False} si no lo es.
+    Si no encuentra el cliente
+    la función retorna \texttt{False}.
+    
+    \begin{lstlisting}[style = consola]
+    >>> [*dar_credito('clientes.txt', '9999999-k') *]
+    False
+    \end{lstlisting}
+  \item[c)]
+    Escriba una función
+    \texttt{contar\_clientes(archivo)}
+    que reciba como parámetros el nombre del archivo
+    de clientes y que retorne un diccionario
+    con la cantidad de clientes de cada clase
+    en el archivo.
+    
+    \begin{lstlisting}[style = consola]
+    >>> [*contar_clientes('clientes.txt')*]
+    {'VIP: 3, 'Pendiente': 1, 'RIP': 2, 'Estandar':1}
+    \end{lstlisting}
+  \end{itemize}

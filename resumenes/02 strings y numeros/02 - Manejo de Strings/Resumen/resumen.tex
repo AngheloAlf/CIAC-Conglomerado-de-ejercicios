@@ -1,0 +1,52 @@
+\section{Manejo de strings}
+
+Los datos que representan texto son llamados \texttt{strings} y se representan mediante comillas simples como \texttt{'Programar es genial'}, o dobles como \texttt{"\ El CIAC es el mejor lugar para estudiar"}.
+\\
+Los strings se pueden unir o concatenar usando el símbolo \texttt{+} de la siguiente forma
+
+\begin{lstlisting}[style=consola]
+>>>'Practicare Python todas las semanas ' + 'para aprobar progra'
+'Practicare Python todas las semanas para aprobar progra'
+\end{lstlisting}
+
+o bien usando variables, nótese el uso de espacios en la concatenación
+
+\begin{lstlisting}[style=consola]
+>>>tutor_1='Pancho'
+>>>tutor_2='Miguel'
+>>>print tutor_1+' y '+tutor_2+' '+'son los mejores'
+Pancho y Miguel son los mejores
+\end{lstlisting}
+
+Para conocer la cantidad de letras que tiene cierto string se usa el comando \texttt{len}
+
+\begin{lstlisting}[style=consola]
+>>>palabra='Intensivo'
+>>>len(palabra)
+9
+\end{lstlisting}
+
+Para ingresar datos se usa el comando \texttt{raw\_input("Texto indicativo")} el cual recibe una entrada que puede ser guardada en una variable
+
+\begin{lstlisting}[style=consola]
+variable=raw_input('Ingrese dato: ')
+\end{lstlisting}
+
+Teniendo esto en cuenta desarrolle:
+\begin{itemize}
+    \item Un programa que pida un nombre y un apellido y los imprima por pantalla
+    \begin{lstlisting}[style=consola]
+    Ingrese nombre: Miguel
+    Ingrese apellido: Godoy
+    Su nombre es Miguel y su apellido Godoy
+    
+    \end{lstlisting}
+    
+    \item Un programa que pida una palabra e informe cuantas letras tiene
+    
+    \begin{lstlisting}[style=consola]
+    Ingrese una palabra: Aprender
+    La palabra Aprender tiene 8 letras.
+    \end{lstlisting}
+    
+\end{itemize}

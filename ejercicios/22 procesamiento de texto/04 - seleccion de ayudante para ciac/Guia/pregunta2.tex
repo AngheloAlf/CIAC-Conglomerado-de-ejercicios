@@ -1,0 +1,48 @@
+\section{Selección de ayudante para CIAC}
+CIAC cada semestre abre sus puertas para poder postular al cargo de tutor académico del ramo de Programización. Este cargo requiere mucha dedicación y manejo de la materia, por lo que los alumnos con muy baja prioridad o muy alta quedan principalmente excluidos. Idealmente se busca a un ayudante con la prioridad más cercana a 7000 y promedio de notas más cercano a 100.\\
+
+Los datos de los alumnos postulantes se guardaron en un archivo de texto, pero el programizador encargado de hacer el programa de selección de tutores estaba tan lleno de pruebas que se encargó de pasar los datos a una lista para pedirle ayuda a los estudiantes de IWI-131 que van a los intensivos de CIAC, ya que ellos aún no han visto archivos de texto, \textbf{pero dicen estar muy entusiasmados por aprender a usarlos}.\\
+\begin{lstlisting}[style=consola]
+alumnos=[
+    'Arturito;5430.82;35,67,80,40',
+    'Miguel;6341.47;92,77,84',
+    'Federico;10341;0,0,1,0,7',
+    'Pedrote;4500;57,68,100']
+\end{lstlisting}
+
+Esta lista contiene el nombre del postulante, prioridad académica y notas. Estos tres datos están escritos en forma de string y separados por punto y coma (;), y notas está separado por comas (,).
+
+El encargado de la selección le pide a usted que programe las siguientes funciones:
+\begin{itemize}
+    \item[a.] \texttt{formar\_diccionario(alumnos)} que reciba como parámetro la lista alumnos y retorne un diccionario con los datos ordenados y separados, donde las llaves son los nombres de los postulantes y los valores son tuplas que tienen la prioridad académica y el promedio de notas.
+    \begin{lstlisting}[style=consola]
+>>> [* formar_diccionario(alumnos) *]
+{'Pedrote': (4500.0, 75.0), 
+'Miguel': (6341.47, 84.3), 
+'Arturito': (5430.82, 55.5), 
+'Federico': (10341.0, 1.6)}
+    \end{lstlisting}
+    \item[b.] \texttt{agregar\_alumno(nombre,prioridad,notas)} que reciba el nombre del postulante como string, la prioridad como flotante y una lista de notas enteras y agregue apropiadamente a la lista alumnos los datos ordenados como string.
+    \begin{lstlisting}[style=consola]
+>>> agregar_alumno('Juan',4500.12,[34,12,15,8])
+>>> alumnos
+['Arturito;5430.82;35,67,80,40', 
+#... 
+'Juan;4500.12;34,12,15,8']
+    \end{lstlisting}
+    \item[c.] \texttt{calcular\_puntaje(prioridad,promedio)} que reciba dos enteros y calcule el puntaje correspondiente. Imagine que ordena los datos como puntos en un plano cartesiano donde los ejes son la prioridad y el promedio. El puntaje es la distancia desde el punto óptimo al punto solicitado.
+    \begin{displaymath}
+    \sqrt{(prioridad-7000)^{2}+(promedio-100)^{2}}
+    \end{displaymath}
+    \begin{lstlisting}[style=consola]
+>>> calcular_puntaje(7900.0,70.0)
+900.4998611882181
+    \end{lstlisting}
+    \item[d.] \texttt{seleccionar\_ayudante(alumnos)} Esta función elige de la lista alumnos al postulante con menor puntaje (calculado en base a la función anterior) y retorna el nombre del alumno
+    \begin{lstlisting}[style=consola]
+>>> seleccionar_ayudante(alumnos)
+'Miguel'
+    \end{lstlisting}
+\end{itemize}
+
+\textbf{Ayuda}: Recuerde que los buenos programizadores usan las funciones anteriores en las funciones nuevas del programa. 

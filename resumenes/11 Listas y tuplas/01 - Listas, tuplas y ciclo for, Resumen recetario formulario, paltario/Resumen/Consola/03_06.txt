@@ -1,0 +1,3 @@
+for tupla in capitales:
+    pais,capital=tupla
+    print('La capital de',pais,'es',capital)

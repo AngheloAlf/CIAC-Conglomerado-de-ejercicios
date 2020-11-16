@@ -1,0 +1,30 @@
+\subsection*{Ciclo for}
+
+Anteriormente para recorrer una estructura de tipo string, nos aprovechábamos de que podemos acceder a cada caracter usando un índice de la forma:
+\inputPythonSimple{Resumen/Consola/03_01.txt}
+
+Que imprime
+\begin{lstlisting}[style=consola]
+P r o g r a m a c i o n
+\end{lstlisting}
+
+Lo anterior se puede seguir usando, pero existe una forma más compacta de recorrer estructuras usando el comando \texttt{for}
+
+\inputPythonSimple{Resumen/Consola/03_03.txt}
+
+Que imprime lo mismo.
+
+Para recorrer una estructura de listas con tuplas que deben desempaquetarse, como por ejemplo
+\inputPythonSimple{Resumen/Consola/03_04.txt}
+
+Se puede
+\begin{itemize}
+    \item[1.] Desempaquetar inmediatamente 
+    \inputPythonSimple{Resumen/Consola/03_05.txt}
+    
+    \item[2.] Desempaquetar en un paso siguiente
+    \inputPythonSimple{Resumen/Consola/03_06.txt}
+    
+    \item[3.] No desempaquetar, y usar índices para referirse a los datos
+    \inputPythonSimple{Resumen/Consola/03_07.txt}
+\end{itemize}

@@ -1,0 +1,55 @@
+\section{Con los terroristas (Again)}
+
+El Comité Internacional Anti-Catástrofes le ha pedido ayuda a usted para poder manejar su base de datos de terroristas. El comité tiene su base de datos en archivos de texto. Le han informado que los archivos tendran la siguiente estructura
+
+\texttt{codigoTerrorista;lugar1>fecha1,lugar2>fecha2,...}
+
+Un ejemplo de esto seria lo siguiente:
+
+\begin{lstlisting}[style=consola]
+314;Pentagono>2010-05-02
+1234;Pentagono>2010-05-02,Torre Eiffel>2004-08-26,Area 51>2001-09-11
+9876;Casa Blanca>2004-08-26
+700;Torre Eiffel>2010-05-02,Pentagono>2011-06-08
+2017;Torres Gemelas>2001-09-11
+\end{lstlisting}
+
+Además, le han informado de que cada terrorista tiene habilidades especiales. Las habilidades de cada terrorista estan almacendadas en archivos que tienen por nombre \texttt{codigo.txt}, donde codigo es el codigo del terrorista. Un ejemplo seria el siguiente:
+
+\begin{center}
+\texttt{2017.txt}
+\end{center}
+\begin{lstlisting}[style=consola]
+Aviones explosivos
+Explosiones explosivas que explotan 
+\end{lstlisting}
+
+\begin{enumerate}
+\item Cree la función \texttt{seConocen(terroristas, terro1, terro2)}; la cual recibe el nombre del archivo de los terroristas y el codigo de 2 terroristas. Retorna \texttt{True} si ambos han sido vistos en algún lugar en común y en la misma fecha, o \texttt{False} si no hay registros de esto.
+
+\begin{lstlisting}[style=consola]
+>>> seConocen("terroristas.txt", 1234, 314)
+True
+>>> seConocen("terroristas.txt", 2017, 700)
+False
+\end{lstlisting}
+
+\item Cree la función \texttt{habilidadesUnicas(terroristas)}; la cual recibe el nombre del archivo de los terroristas, y retorna un diccionario cuya llave sera el código de cada terrorista, y su valor sera un conjunto de sus habilidades, las cuales deben ser habilidades que ningún otro terrorista posea. Si el terrorista no posee habilidades únicas, debe existir en este diccionario, pero con un conjunto vacio asociado.
+
+\begin{lstlisting}[style=consola]
+>>> habilidadesUnicas("terroristas.txt")
+{700: set([]), 314: set(['Rayos laser']), 9876: set(['Teletransportacion']), 
+1234: set([]), 2017: set(['Explosiones explosivas que explotan', 
+'Aviones explosivos'])}
+\end{lstlisting}
+
+\item Cree la función \texttt{terroristasPeligrosos(terroristas)}, la cual recibe el nombre del archivo de los terroristas, y retorna un diccionario, el cual su llave son solo los terroristas que poseen habilidades únicas, y su valor es \texttt{True} si no se conoce con ningún otro terrorista, y \texttt{False} en caso contrario.
+
+\begin{lstlisting}[style=consola]
+>>> terroristasPeligrosos("terroristas.txt")
+{2017: True, 9876: True}
+\end{lstlisting}
+
+\end{enumerate}
+
+\textbf{Nota}: Para acceder a los archivos usados en este ejercicio, entre a la pagina http://bit.ly/2ti4sR4

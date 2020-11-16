@@ -1,0 +1,39 @@
+%%%Pregunta 1
+
+\section{Factorial}
+
+El factorial de un numero $n$ se denota como $n!$, lo que es igual a  $1*2*3*...*n$. Sabiendo esto haga un diagrama de flujo reciba como entrada un numero $n$ y escriba cual es el factorial de ese numero.
+
+%%%Pregunta 2
+\section{Ecuacion cuadratica}
+
+La ecuacion cuadratica esta definida por:
+\begin{align*}
+    f(x) &= y = ax^2 + bx + c
+\end{align*}
+
+Su punto de vertice esta dado segun las siguientes ecuaciones:
+\begin{align*}
+    x_0 &= \frac{-b}{2a} \\
+    y_0 &= f(x_0) = a\left(\frac{-b}{2a}\right)^{2} + b\left(\frac{-b}{2a}\right) + c
+\end{align*}
+
+Las raíces de la ecuación cuadrática se calculan con la formula:
+\begin{align*}
+    x &= \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\end{align*}
+
+Sabiendo esto escriba un programa que reciba los valores $a$, $b$ y $c$ e indique cual es el vértice y las raíces de esta ecuación, además de imprimir la ecuación cuadrática.
+
+\begin{lstlisting}[style=consola]
+    Ingrese a: [*2*]
+    Ingrese b: [*8*]
+    Ingrese c: [*-24*]
+    
+    El punto vertice de la ecuacion es (-2.0, -32.0)
+    Las raices de la ecuacion son: 2.0 y -6.0
+    La ecuacion cuadratica es: 2.0x^2 + 8.0x + -24.0
+\end{lstlisting}
+
+Nota: Tenga en consideración que ocurre cuando el determinante es mayor, menor o igual a cero.
+

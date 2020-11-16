@@ -1,0 +1,45 @@
+\section{Jugar a leer archivos de texto}
+Para la copa USM de futbol, CIAC está organizando su equipo "Ni por CIACaso", lo malo es que la alta competencia ha llevado a que los tutores de las distintas áreas no puedan jugar en el mismo equipo. Para ello se han jugado varios partidos aleatorios, cuyos datos se han guardado en un archivo de texto.
+
+Cierto estudiante de programación sabe como leer archivos de texto usando Python, pero no fue a las primeras clases por lo que no sabe como trabajar con strings. 
+
+Cada línea del archivo contiene los datos de un partido jugado, separados por ; (punto y coma), donde los dos primeros datos son los equipos participantes, y los dos últimos los goles marcados respectivamente.
+
+\begin{lstlisting}[style=consola]
+resultados= [ 	
+        'progra;matfis;1;2\n',
+        'matfis;quimica;3;2\n',
+        'progra;matfis;5;2\n',
+        'matfis;quimica;1;5\n',
+        'matfis;quimica;0;3\n',
+        'matfis;progra;0;3\n',
+        'quimica;progra;2;3\n',
+        'progra;quimica;5;3\n',
+        'quimica;matfis;4;1\n']
+\end{lstlisting}
+
+Él lo encuentra en un pasillo y le pide que programe algunas funciones considerando la lista anterior (que obtuvo del archivo).
+
+\begin{itemize}
+    \item \texttt{total\_equipos(resultados)} que reciba la lista de resultados y retorne un conjunto con todos los equipos que participaron.
+    
+    \begin{lstlisting}[style=consola]
+>>> total_equipos(resultados)
+set(['quimica', 'matfis', 'progra'])
+    \end{lstlisting}
+    
+    \item \texttt{lista\_por\_equipo(equipo,resultados)} que recibiendo un string del equipo y la lista de resultados retorne una lista de la forma \texttt{[PJ,PG,PP,PE,pts]}, donde PJ son los partidos jugados, PG los partidos ganados, PP los partidos perdidos, PE los partidos empatados y pts los puntos obtenidos por el equipo, donde cada partido ganado suma 3 y cada partido empatado suma 1.
+    
+\begin{lstlisting}[style=consola]
+>>> lista_por_equipo('progra',resultados)
+[5, 4, 1, 0, 12]
+\end{lstlisting}
+    \item \texttt{crear\_diccionario(resultados)} que recibiendo la lista de resultados retorne un diccionario donde las llaves sean los equipos y sus valores la lista creada por la función anterior.
+    
+    \begin{lstlisting}[style=consola]
+>>> crear_diccionario(resultados)
+{'quimica': [6, 3, 3, 0, 9], 
+'matfis': [7, 2, 5, 0, 6], 
+'progra': [5, 4, 1, 0, 12]}    
+    \end{lstlisting}
+\end{itemize}

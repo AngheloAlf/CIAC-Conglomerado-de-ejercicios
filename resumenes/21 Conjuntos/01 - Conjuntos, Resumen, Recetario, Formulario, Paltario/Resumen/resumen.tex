@@ -1,0 +1,116 @@
+\section*{Resumen, Recetario, Formulario, Paltario, etc}
+
+\subsection*{Conjuntos}
+
+\begin{itemize}
+\item Un conjunto es un tipo de dato que permite almacenar valores no repetidos y de forma desordenada
+
+\item Para inicializar un conjunto use:
+\begin{lstlisting}[style=consola]
+conjunto={datos} #o bien
+conjunto=set(datos)
+\end{lstlisting}
+
+\item Para agregar un elemento al conjunto use la función \textit{conjunto.add(elemento)}:
+\begin{lstlisting}[style=consola]
+>>> conjunto = {8, 9, "abc"}
+>>> conjunto.add("def")
+>>> print conjunto
+set([8, 9, "abc", "def"])
+\end{lstlisting}
+Tener en consideración que set([]) es solamente una notación para indicar que es un conjunto, los elementos son los que están dentro de los corchetes []
+
+\item No tienen elementos repetidos:
+\begin{lstlisting}[style=consola]
+>>> conjunto = {1, 9, 1, 5, 5, 1, 9}
+>>> print conjunto
+set([9, 5, 1])
+\end{lstlisting}
+
+\item Solo se pueden agregar elementos inmutables a conjuntos, es decir, enteros (\textit{int}), flotantes (\textit{float}), strings (\textit{str}), tuplas (\textit{tuple}), booleanos (\textit{bool}), etc.
+
+\item A diferencia de listas y tuplas, los conjuntos no tienen orden, de modo que no se pueden obtener elementos a través de un índice.
+
+\item Para usar los elementos de un conjunto, generalmente se usa el ciclo for:
+\begin{lstlisting}[style=consola]
+>>> conjunto = {1, 9, 1, 5, 5, 1, 9}
+>>> for i in conjunto:
+        print i
+9
+5
+1
+\end{lstlisting}
+
+%%\item La función \textit{len} entrega la cantidad de elementos en el conjunto
+%%    \begin{lstlisting}[style=consola]
+%%    >>> conjunto = {1, 9, 1, 5, 5, 1, 9}
+%%    >>> print len(conjunto)
+%%    3
+%%    \end{lstlisting}
+
+\item El operador \textit{in} permite saber si un elemento en especifico se encuentra en el conjunto:
+\begin{lstlisting}[style=consola]
+>>> conjunto = {1, 9, 1, 5, 5, 1, 9}
+>>> 5 in conjunto
+True
+>>> 3.14 in conjunto
+False
+>>> "abc" not in conjunto
+True
+\end{lstlisting}
+
+\item La función \textit{conjunto.remove(elemento)} elimina el elemento del conjunto. Si el elemento no esta en el conjunto, tirara un error:
+\begin{lstlisting}[style=consola]
+>>> conjunto = {1, 9, 1, 5, 5, 1, 9}
+>>> conjunto.remove(1)
+>>> print conjunto
+set([9, 5])
+\end{lstlisting}
+
+\item Como en matemáticas, podemos obtener la intersección y unión de conjuntos, esto se hace con los operadores \& y | respectivamente:
+\begin{lstlisting}[style=consola]
+>>> a = {1, 9, 5}
+>>> b = {1, 422, 8, 3.14}
+>>> print a & b
+set([1])
+>>> print a | b
+set([1, 9, 5, 422, 8, 3.14])
+\end{lstlisting}
+
+\item El operador \textit{a - b} (diferencia de conjuntos) entrega un conjunto que contiene elementos de a quitando los que ya se encuentran en b:
+\begin{lstlisting}[style=consola]
+>>> a = {1, 9, 5}
+>>> b = {1, 422, 8, 3.14}
+>>> print a - b
+set([9, 5])
+\end{lstlisting}
+
+\item El operador \textit{a \textasciicircum b} entrega la diferencia simétrica, es decir, los elementos que están en a o en b, pero no en ambos:
+\begin{lstlisting}[style=consola]
+>>> a = {1, 9, 5}
+>>> b = {1, 9, 3.14}
+>>> print a ^ b
+set([3.14, 5])
+\end{lstlisting}
+
+\item El operador \textit{a < b} es lo mismo que preguntar si a es subconjunto de b:
+\begin{lstlisting}[style=consola]
+>>> a = {1, 9}
+>>> b = {1, 9, 3.14}
+>>> print a < b
+True
+\end{lstlisting}
+
+\item El operador \textit{a <= b} es equivalente a preguntar si es subconjunto o si son iguales:
+\begin{lstlisting}[style=consola]
+>>> a = {1, 9}
+>>> b = {1, 9, 3.14}
+>>> print {1, 9, 3.14} < b
+False
+>>> print {1, 9, 3.14} <= b
+True
+\end{lstlisting}
+
+\end{itemize}
+
+\newpage

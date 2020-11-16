@@ -1,0 +1,2 @@
+tupla = (datos) #o bien
+tupla = tuple(datos)

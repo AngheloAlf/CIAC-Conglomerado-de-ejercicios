@@ -1,0 +1,60 @@
+\usepackage{fancyhdr}
+
+% Dimensiones de la página.
+\geometry{paper=a4paper, top=2cm, left=2cm, right=2cm}
+
+
+\pagestyle{fancy}
+
+% Esconde la numeración por defecto de las páginas.
+\fancyhf{}
+
+% Logos
+\lhead{\includegraphics[width=2.5cm]{imagenes/logo_usm}}
+\rhead{\includegraphics[width=2.5cm]{imagenes/logo_ciac}}
+
+%\chead{
+%  Evaluación formativa \textit{Online}  N° 3\\
+%  IWI-131 Semestre II-2019 Fase II \\
+%  CIAC Casa Central
+%}
+% El titulo de la guía/pauta
+\newcommand{\tituloDocumento}[1]{\chead{#1}}
+\newcommand{\tituloGuia}[2]{\chead{
+  #1 Guía N° #2 \\
+  \ramo \ Semestre \ \semestre-\anno \\
+  CIAC Casa Central
+}}
+\newcommand{\tituloPauta}[2]{\chead{
+  #1 Pauta N° #2 \\
+  \ramo \ Semestre \ \semestre-\anno \\
+  CIAC Casa Central
+}}
+\newcommand{\tituloOtro}[1]{\chead{
+  #1 \\
+  \ramo \ Semestre \ \semestre-\anno \\
+  CIAC Casa Central
+}}
+
+\newcommand{\ramo}{\textbackslash renewcommand\{\textbackslash ramo\}\{IWI-131\}}
+
+\newcommand{\anno}{\textbackslash renewcommand\{\textbackslash anno\}\{2020\}}
+\newcommand{\semestre}{\textbackslash renewcommand\{\textbackslash semestre\}\{I\}}
+
+
+% Debes definir el comando \anno (\newcommand{\anno}{2020})
+\lfoot{Página \thepage}
+\rfoot{\LaTeXe / CIAC \anno}
+% \rfoot{\LaTeXe / CIAC 2020}
+
+% Tamaño de las lineas horizontales al inicio y final de la página
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+% Deja espacio suficiente para que el contenido no choque con el encabezado
+\setlength{\headheight}{47pt}
+
+% Cambia la fuente del comando \texttt
+\renewcommand{\ttdefault}{pcr}
+
+

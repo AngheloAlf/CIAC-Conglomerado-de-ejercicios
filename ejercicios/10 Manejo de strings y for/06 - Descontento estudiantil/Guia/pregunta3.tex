@@ -1,0 +1,33 @@
+%%%Pregunta 1
+
+\section{Descontento estudiantil}
+
+Debido a que el rector de cierta universidad ha puesto un plan de cobros a los estudiantes que estudian durante la noche y fines de semana en la universidad, los estudiantes han mostrado desacuerdo y han amenazado con hacer un paro para demostrar su descontento y que el rector quite este sistema de cobros.
+
+Ante esta situacion, el rector decide bajar a la mitad los cobros y no cobrar por el fin de semana si los estudiantes no se van a paro.
+
+Para saber si los estudiantes estan de acuerdo con esta medida, se llamara a votaciones la proxima semana. Para poder llevar la cuenta de los votos, se ha decidido hacer un programa para este cometido
+
+Este programa debe poder aceptar 4 tipos de voto (\textit{A} = Acepto, \textit{R} = Rechazo, \textit{B} = Blanco y \textit{N} = Nulo) que seran ingresadas como largas cadenas de votos. Cada vez que ya se hayan ingresado los votos, se debera preguntar si se ingresaran mas votos de otros centros de estudiantes, si el usuario ingresa \texttt{No}, el programa debera detenerse y mostrar cuantos votos de cada tipo hubieron (en numero y porcentaje), el total de votos y cuantos centros de estudiantes ingresaron sus votos.
+
+Un ejemplo del funcionamiento seria el siguiente:
+
+\begin{lstlisting}[style=consola]
+Ingrese votos: [*AAAAARANBANNARBRRANABRNABBR*]
+Ingresara mas votos?: [*Si*]
+Ingrese votos: [*AARBNAARNNRNAR*]
+Ingresara mas votos?: [*Si*]
+Ingrese votos: [*AAARABRRANABAANABRNARNBBNRABBBNAABBR*]
+Ingresara mas votos?: [*Si*]
+Ingrese votos: [*ARABRRANAABRNARNARANBANNARNBBNRABRRANABRNABBR*]
+Ingresara mas votos?: [*No*]
+
+Se ingresaron XX votos
+Aceptan:
+Rechazan:
+Blancos:
+Nulos:
+Se ingresaron los votos de 4 centros de estudiantes
+\end{lstlisting}
+
+\newpage

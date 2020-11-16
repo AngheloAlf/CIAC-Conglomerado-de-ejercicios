@@ -1,0 +1,34 @@
+\section{Venta de pokemones}
+En un mundo digital Mike, Francis y Ash se dedican a vender pokemones, ya que atraparlos a todos los ha dejado sin dinero. La demanda es tal, que deciden hacer un programa en Python para manejar sus finanzas.
+
+Le piden ayuda a usted para crear un programa que contenga las siguientes operaciones
+
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+Operación & Significado \\
+\hline \hline
+1 & Ingresar nueva venta, solicita vendedor y cantidad vendida \\ \hline
+2 & Consultar mejor vendedor (aquel cuyo monto total personal sea mayor) \\ \hline
+0 & Salir e indicar monto total vendido \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+El funcionamiento de este programa debe ser algo como:
+\begin{lstlisting}[style=consola]
+Operacion: 1
+Ingrese pokemones vendidos: 7
+Ingrese vendedor [M:Mike, F:Francis, A:Ash]: F
+Operacion: 1
+Ingrese pokemones vendidos: 6
+Ingrese vendedor [M:Mike, F:Francis, A:Ash]: A
+Operacion: 1
+Ingrese pokemones vendidos: 10
+Ingrese vendedor [M:Mike, F:Francis, A:Ash]: M
+Operacion: 2
+El mejor vendedor es Mike, que ha vendido 10 pokemones
+Operacion: 0
+Se vendieron 23 pokemones
+\end{lstlisting}

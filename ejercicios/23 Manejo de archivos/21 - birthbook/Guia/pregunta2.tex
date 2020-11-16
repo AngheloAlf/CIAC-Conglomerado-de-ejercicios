@@ -1,0 +1,60 @@
+\section{Birthbook}
+
+La red social birthbook requiere desarrollar una aplicación para que un usuario pueda enviar un saludo de cumpleaños de manera automática a todos sus amigos que se encuentren de cumpleaños. La información se encuentra en el archivo \texttt{amigos.txt} con la siguiente estructura: \texttt{nombre apellido; sexo;edad; grado de amistad;fecha\_cumpleanios}. El sexo puede ser M o F. El grado de amistad va de 1 a 5 (1 es poco amigos y 5 es muy amigo). La fecha del cumpleaños tiene siempre el formato que se muestra en el siguiente ejemplo.
+
+\begin{table}[h]
+\centering
+\caption{amigos.txt}
+\begin{tabular}{|l|}
+\hline
+\texttt{Juan Perez;M;5;23 de noviembre del anio 1990    } \\
+\texttt{Marcela Soto;F;1;21 de octubre del anio 1992    } \\
+\texttt{Andrea Olivares;F;3;13de enero del anio 2000     }\\
+\texttt{Pedro Gonzalez;M;2;23 de noviembre del anio 2010} \\ \hline
+\end{tabular}
+\end{table}
+
+Asuma que el archivo tiene muchos registros, no sólo los del ejemplo. Además los usuarios del archivo tienen registrado sólo un nombre y un apellido. Por otro lado, existe un archivo \texttt{saludos.txt} que tiene 5 saludos dependiendo del grado de amistad. La estructura es: \texttt{grado de amistad;mensaje}
+
+\begin{table}[h]
+\centering
+\caption{saludos.txt}
+\begin{tabular}{|l|}
+\hline
+\texttt{1;Feliz Cumpleanios {0}, suerte!} \\
+\texttt{2;Feliz Cumpleanios {0} que lo pases bien!} \\
+\texttt{3;Feliz Cumpleanios {0} que lo pases excelente en tu dia.}\\
+\texttt{4;Amigo {0}, felicidades en tus {1} anios, espero sea un dia especial.} \\
+\texttt{Amigazo {0}, celebraremos tus {1} anios como corresponde.}\\ \hline
+\end{tabular}
+\end{table}
+
+Donde {0} es el nombre del amigo y {1} es el número de años (presente sólo en mensajes 4 y 5)
+
+\begin{itemize}
+    \item[a)] Escriba la función \texttt{leer\_amigos(archivo\_amigos)} que retorne una lista de tuplas de cada uno de los datos del archivo \texttt{archivo\_amigos} con la siguiente estructura:
+
+\begin{lstlisting}[style=consola]
+>>> leer_amigos('amigos.txt')
+[('Juan Perez/M/5', '23-nov-1990'), ('Marcela Soto/F/1', '21-oct-1992'), 
+('Andrea Olivares/F/3','13-ene-2000'),('Pedro Gonzalez/M/2','23-nov-2010')]
+\end{lstlisting}
+
+    \item[b)] Escriba la función \texttt{cumpleaneros(archivo\_amigos, archivo\_saludos, fecha)} que genere un archivo llamado \texttt{saludos-FECHA.txt}, donde FECHA corresponde a la fecha con el formato dia\_mes (por ejemplo si fecha es '10 de enero de 2012', el arhcio debería llamarse saludos -10\_ene.txt). El archivo debe contener el saludo, dependiendo del nivel de amistad, de los amigos que están de cumpleaños en la fecha \texttt{fecha}. Note el formato que tiene el parámetro \texttt{fecha} en el ejemplo:
+    
+    \begin{lstlisting}[style=consola]
+>>>cumpleaneros('amigos.txt','saludos.txt',23 de noviembre 2012')
+    \end{lstlisting}
+    Esto debería generar un archivo como el siguiente:
+    
+\begin{table}[h]
+\centering
+\caption{saludos-23\_nov.txt}
+\begin{tabular}{|l|}
+\hline
+\texttt{Amigazo Juan Perez, tus 22 anios lo celebraremos como corresponde} \\
+\texttt{Feliz Cumpleanios Pedro Gonzalez que se cumplan todos tus deseos} \\ \hline
+\end{tabular}
+\end{table}
+La función no debe retornar nada, sólo generar el archivo.
+\end{itemize}

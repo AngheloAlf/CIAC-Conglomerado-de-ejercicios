@@ -1,0 +1,82 @@
+\section{La carrera de las chanchas}
+En cierta universidad técnica de un pueblo costero, se realiza todos los años sin excepción una carrera muy particular. En este certamen deportivo, los corredores se ven sometidos a una exigencia muy alta, por lo que practican sin descanso.
+
+En sus entrenamientos, todos los participantes llevan un registro de sus distancias y tiempos registrados en un archivo de texto con datos en líneas diferentes con la siguiente estructura:
+
+\begin{itemize}
+    \item Nombre de archivo: \texttt{ID\_corredor.txt}
+    \item 1$^\circ$ línea: \texttt{Nombre\_corredor;velocidad\_promedio\_inicial}
+    \item Líneas siguientes: \texttt{distancia,tiempo} (en unidades desconocidas)
+\end{itemize}
+
+Todos estos archivos de texto de los distintos corredores se encuetran en la carpeta corredores, presente en el mismo directorio del archivo de funciones. Dentro de los archivos de texto, se encuentra \texttt{promedio.txt} donde la estructura de cada línea es \texttt{ID\_corredor;velocidad\_promedio\_inicial} (con su respectivo salto de línea). Ejemplos de estos archivos creados de forma aleatoria son:
+
+
+\begin{center}
+	\begin{tabular}{ccc}
+		\begin{tabular}{|l|}
+		\multicolumn{2}{c}{promedios.txt} \\
+			\hline
+			1034-7;45.3\\
+			4068;30.8\\
+			9102-1;29.1\\
+			16136-8;25.0\\
+			\hline
+		\end{tabular} &  	        	 & 
+		
+		\begin{tabular}{|l|}
+			\multicolumn{2}{c}{4068-4.txt}
+			\\
+			\hline 
+			MARIE;30.8\\
+			63,63\\ 
+			36,19\\ 
+			731,4\\ 
+			501,67\\ 
+			247,8\\ 
+			\hline 
+		\end{tabular}
+	\end{tabular}
+\end{center}
+
+Se le pide a usted programar las siguientes funciones:
+\begin{itemize}
+    \item[a.] \texttt{agregar\_tiempo(id\_corredor,distancia,tiempo)} que agregue al final de cada archivo los datos ingresados como parámetros (el primero como string y los restantes como entero). Esta función no retorna nada.
+    %\begin{lstlisting}[style=consola]
+%>>> agregar_tiempo('9102-1',120,32)
+%>>>
+    %\end{lstlisting}
+    \item[b.] \texttt{velocidad\_promedio\_real(id\_corredor)} que entregue un flotante con la razón de la velocidad $\frac{distancia}{tiempo}$ del competidor. Para esto use todos los datos (menos la velocidad promedio inicial) del archivo respectivo del corredor.
+    \begin{lstlisting}[style=consola]
+>>> [*velocidad_promedio_real('9102-1')*]
+10.9
+    \end{lstlisting}
+    \item[c.] \texttt{actualizar\_promedios(promedios)} que, recibiendo el nombre del archivo con los promedios, actualice los datos de los promedios de los corredores a el promedio real (calculado con la función anterior) en el mismo archivo de texto. Use archivos temporales, no es necesario que los elimine. La función retorna nada.
+ %   \begin{lstlisting}[style=consola]
+%>>> actualizar_promedios('promedios.txt')
+%>>>
+  %  \end{lstlisting}
+    \item[d.] \texttt{estado(promedios)} que recibiendo el nombre del archivo con los promedios imprima por pantalla el estado de los competidores dependiendo si su velocidad ha mejorado, empeorado o sigue igual (para esto compare la velocidad promedio real con la velocidad promedio inicial, escrita en el archivo correspondiente de cada competidor). La estructura de la impresión debe ser
+    \begin{lstlisting}[style=consola]
+NOMBRE ha ESTADO su velocidad. Antes era VPI y ahora es VPR.
+    \end{lstlisting}
+    Donde \texttt{VPI} es velocidad promedio inicial y \texttt{VPR} es velocidad promedio real.
+    
+    \begin{lstlisting}[style=consola]
+>>> [*estado('promedios.txt')*]
+CHRISTINE ha mejorado su velocidad. Antes era 45.3 y ahora es 13.3 
+MARIE ha mejorado su velocidad. Antes era 30.8 y ahora es 9.8 
+CAROLYN ha empeorado su velocidad. Antes era 29.1 y ahora es 30.9 
+MARIA ha mejorado su velocidad. Antes era 25.0 y ahora es 14.7 
+MARIA ha mantenido su velocidad. Antes era 44.0 y ahora es 44.0
+    \end{lstlisting}
+\end{itemize}
+\subsection{Pistas}
+\begin{itemize}
+    \item Se puede ayudar programando una función auxiliar que retorne la velocidad promedio inicial y el nombre del corredor recibiendo como parámetro el \texttt{id\_corredor}.
+    \item Para entrar a un archivo de texto que está dentro de una carpeta use
+    \begin{lstlisting}[style=consola]
+arch=open('corredores\\'+id_corredor+'.txt')
+    \end{lstlisting}
+    El doble backslash ($\backslash \backslash$) se usa para anular la naturaleza de caracter especial que tiene este mismo. Recuerde que los caracteres especiales de Python como el salto de línea o la tabulación lo utilizan.
+\end{itemize}

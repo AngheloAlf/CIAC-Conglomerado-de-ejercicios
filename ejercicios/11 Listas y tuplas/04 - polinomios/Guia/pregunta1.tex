@@ -1,0 +1,92 @@
+\section{Polinomios}
+
+  Un polinomio de grado \(n\)
+  es una función matemática de la forma:
+  
+  \begin{equation*}
+    p(x) = a_0 + a_1 \cdot x + a_2 \cdot x^2 + \hdots + a_n \cdot x^n
+  \end{equation*}
+  
+  Donde \(x\) es el parámetro y
+  \(a_0, a_1, \hdots, a_n\) son números reales dados.
+  Algunos ejemplos de polinomios son:
+  \begin{itemize}
+  \item \(p(x) = 1 + 2x + x^2\)
+  \item \(q(x) = 4 - 17x\)
+  \item \(r(x) = -1 -5x^3 + 3x^5\)
+  \item \(s(x) = 5x^{40} + 2x^{80}\)
+  \end{itemize}
+  
+  Los grados de estos polinomios son, respectivamente,
+  \(2\), \(1\), \(5\) y \(80\).
+  
+  Evaluar un polinomio significa reemplazar \(x\)
+  por un valor y obtener el resultado de la función.
+  Por ejemplo, si evaluamos el polinomio \(p\)
+  en el valor \(x = 3\),
+  obtenemos el resultado:
+  
+  \begin{equation*}
+    p(3) = 1 + 2 \cdot 3 + 3^2 = 16
+  \end{equation*}
+  
+  Un polinomio puede ser representado como una lista
+  con los valores \texttt{a\_0}, \texttt{a\_1}, ..., \texttt{a\_n}.
+  Por ejemplo, los polinomios anteriores
+  pueden ser representados en un programa como sigue:
+  
+  \begin{lstlisting}[style=consola]
+  >>> p = [1, 2, 1]
+  >>> q = [4, -17]
+  >>> r = [-1, 0, 0, -5, 0, 3]
+  >>> s = [0] * 40 + [5] + [0] * 39 + [2]
+  \end{lstlisting}
+  
+  \begin{enumerate}
+  \item 
+    Escriba la función \texttt{grado(p)}
+    que entregue el grado de un polinomio dado:
+    \begin{lstlisting}[style=consola]
+    >>> grado(r)
+    5
+    >>> grado(s)
+    80
+    \end{lstlisting}
+  \item
+    Escriba la función \texttt{evaluar(p, x)}
+    que evalúe el polinomio \(p\) 
+    (representado como una lista)
+    en el valor \(x\):
+    \begin{lstlisting}[style=consola]
+    >>> evaluar(p, 3)
+    16
+    >>> evaluar(q, 0.0)
+    4.0
+    >>> evaluar(r, 1.1)
+    -2.82347
+    >>> evaluar([4, 3, 1], 3.14)
+    23.2796
+    \end{lstlisting}
+  \item
+    Escriba la función \texttt{sumar\_polinomios(p1, p2)}
+    que entregue la suma de dos polinomios:
+    \begin{lstlisting}[style=consola]
+    >>> sumar_polinomios(p, r)
+    [0, 2, 1, -5, 0, 3]
+    \end{lstlisting}
+  \item
+    Escriba la función \texttt{derivar\_polinomio(p)}
+    que entregue la derivada del polinomio:
+    \begin{lstlisting}[style=consola]
+    >>> derivar_polinomio(r)
+    [0, 0, -15, 0, 15]
+    \end{lstlisting}
+  \item
+    Escriba la función \texttt{multiplicar\_polinomios(p1, p2)}
+    que entregue el producto entre los polinomios de entrada:
+    \begin{lstlisting}[style=consola]
+    >>> multiplicar_polinomios(p, q)
+    [4, -9, -30, -17]
+    \end{lstlisting}
+  \end{enumerate}
+  \pagebreak[4]

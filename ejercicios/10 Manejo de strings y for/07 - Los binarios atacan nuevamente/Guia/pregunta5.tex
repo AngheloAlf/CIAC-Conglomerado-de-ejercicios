@@ -1,0 +1,44 @@
+%Pregunta 5
+
+\section{Los binarios atacan nuevamente}
+
+Como ya sabes como convertir un numero binario a un numero comprensible para todos, te preguntaras como hacer el proceso inverso, representar un numero como una secuencia binaria.
+
+Para hacer esto, debes dividir un numero entre 2, y tomar su resto y anotarlo, luego el numero que ya tienes dividido, lo vuelves a dividir y anotas su resto, asi sucesivamente hasta que el numero quede como 0, y finalmente, la secuencia que tenias guardada debes invertirla y tendras tu secuencia binaria.
+
+Mira el siguiente ejemplo que convierte el numero 13 en binario:
+Nota: En la columna de la izquierda se anota el resultado de la division del numero, y en la columna de la derecha queda el resto de la division del numero.
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{13} & \textbf{2} \\
+        \hline
+         & \\
+        \hline
+        6 & 1 \\
+        \hline
+        3 & 0 \\
+        \hline
+        1 & 1 \\
+        \hline
+        0 & 1 \\
+        \hline
+    \end{tabular}
+\end{center}
+\begin{center}
+    La secuencia (leida de arriba a abajo) quedaria como $1011$, pero hay que recordar invertirla, asi que quedaria $1101$
+\end{center}
+
+Como veras, se divide el numero 13 entre 2, la parte entera de la division, 6, lo anotamos en la columna de la izquierda, y el resto de la division, 1, lo anotamos en la columna de la derecha, y asi sucesivamente hasta que la parte entera de la division nos da 0, ordenamos los restos obtenidos, invertimos el orden y nos da nuestro resultado.
+
+Sabiendo esto, cree la funcion \texttt{numero\_a\_binario(numero)} que reciba un numero y retorne un string que contenga la secuencia binaria que lo representa.
+
+\begin{lstlisting}[style=consola]
+>>> numero_a_binario(25)
+11001
+\end{lstlisting}
+
+\begin{lstlisting}[style=consola]
+>>> binario_a_numero(6)
+110
+\end{lstlisting}

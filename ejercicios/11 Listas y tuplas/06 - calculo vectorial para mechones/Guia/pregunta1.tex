@@ -1,0 +1,45 @@
+\section{Cálculo vectorial programable.}
+La norma $p$ de un vector $\overrightarrow{x}=(x_{1},x_{2},\ldots,x_{n})$ está dada por:
+\begin{displaymath}
+\| \overrightarrow{x}\|_{p} = \sqrt[p]{|x_{1}|^{p} + |x_{2}|^{p} + \ldots + |x_{n}|^p}
+\end{displaymath}
+El producto punto de dos vectores $ \overrightarrow{A}$ y $ \overrightarrow{B}$ está dado por:
+\begin{displaymath}
+\overrightarrow{A} \cdot \overrightarrow{B}= (a_{1},a_{2},\ldots ,a_{n}) \cdot (b_{1},b_{2},\ldots,b_{n})=a_{1}b_{1}+a_{2}b_{2}+\ldots+a_{n}b_{n}=\sum_{i=1}^{n} a_{i}b_{i}
+\end{displaymath}
+
+Teniendo una lista de vectores:
+\begin{lstlisting}[style=consola]
+vectores=[(-1,2,0),(3,4,-7),(1,2,3),(7,0,-3),(19,7,94)]
+\end{lstlisting}
+
+Programe:
+\begin{enumerate}
+    \item[a.] Una función \texttt{norma\_p(vector,p)} que calcule la norma $p$ de un vector y la retorne.
+    \begin{lstlisting}[style=consola]
+>>> norma_p((3,4),2)
+5.0
+>>>norma_p((3,4,5),3)
+5.9999999999999
+    \end{lstlisting}
+    \item[b.] Una función \texttt{producto\_punto(vector\_1,vector\_2)} que calcule el producto punto entre dos vectores y lo retorne (funciona sólo cuando los vectores tienen la misma dimensión).
+    \begin{lstlisting}[style=consola]
+>>> producto_punto((2,3,4),(1,0,3))
+14
+    \end{lstlisting}
+    \item[c.] Una función \texttt{suma(vector\_1,vector\_2)} que sume dos vectores de cualquier dimensión y retorne una tupla con el resultado (al igual que la pregunta anterior, funciona sólo cuando los vectores tienen la misma cantidad de componentes).
+    \begin{lstlisting}[style=consola]
+>>> suma((1,2,3),(3,2,1))
+(4,4,4)
+    \end{lstlisting}
+    \item[d.] Una función \texttt{norma\_2(vectores)} que recibiendo una lista de vectores, retorne una lista con la norma 2 de ellos.
+\begin{lstlisting}[style=consola]
+>>> norma_2(vectores)
+[2.236, 8.602, 3.742, 7.616, 96.156]
+\end{lstlisting}
+    \item[e.] Una función \texttt{suma\_total(vectores)} que recibiendo una lista de vectores, retorne una tupla de la suma de ellos.
+\begin{lstlisting}[style=consola]
+>>>suma_total(vectores)
+(29,15,87)
+\end{lstlisting}
+\end{enumerate}

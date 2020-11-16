@@ -1,0 +1,4 @@
+>>> for l, v in c.items():
+        print("El rut de", v, "es: ", l)
+El rut de Persona es: 14062073-4
+El rut de Miguel es: 13345678-3

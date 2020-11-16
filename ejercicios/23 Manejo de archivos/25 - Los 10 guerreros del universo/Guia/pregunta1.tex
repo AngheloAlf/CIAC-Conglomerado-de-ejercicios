@@ -1,0 +1,57 @@
+\section{Los 10 guerreros del universo}
+
+Debido a los acontecimientos recientes, el equipo de guerreros de nuestro universo se ha quedado sin su décimo participante para torneo de poder. Debido a este agobiante problema, Kokú quiere saber quien seria el mejor candidato para reemplazar al peleador faltante, pero como lo necesita rápido y no tiene tiempo, le pide a usted que genere un programa que lo pueda ayudar a solucionar este problema.
+
+Le han facilitado un archivo de texto con algunos de los posibles candidatos. La estructura del archivo es como la siguiente:
+
+\texttt{nombre;raza;estado;puntaje}
+
+Tenga en consideracion que la lista de candidatos sera mas grande en comparacion a la que aqui se le presenta.
+
+\begin{lstlisting}[style=consola]
+Koku;Saiyajin;participando;180000
+Gohan;Saiyajin impuro;participando;145000
+Vegeta;Saiyajin;participando;170000
+Trunks;Saiyajin;no participa;95000
+Mr. Satan;Terricola;no participa;350
+Miguel;Terricola;no participa;8001
+Piccolo;Namekusei;participando;150000
+Krilin;Terricola;participando;78000
+Nappa;Saiyajin;muerto;10000
+Freezer;Freezer;muerto;45000
+Androide 17;Androide;participando;70000
+Cell;Androide;muerto;90000
+Majin buu;Majin;durmiendo;110000
+\end{lstlisting}
+
+
+Se le pide a usted programar las funciones:
+
+\begin{itemize}
+    \item \texttt{buscar\_por\_raza(archivo, raza)} que retorne una lista de tuplas con los datos de los candidatos que cumplan con ser de la raza \texttt{raza}.
+    
+    \begin{lstlisting}[style=consola]
+>>> buscar_por_raza("candidatos.txt", "Terricola")
+[('Mr. Satan', 'Terricola', 'no participa', '350'), 
+('Miguel', 'Terricola', 'no participa', '8001'), 
+('Krilin', 'Terricola', 'participando', '78000')]
+    \end{lstlisting}
+    
+    \item \texttt{mejor\_candidato(archivo, estado)} que retorne los datos del candidato con el mejor puntaje que su estado sea distinto a \texttt{estado}.
+    
+    \begin{lstlisting}[style=consola]
+>>> mejor_candidato("candidatos.txt", "no participa")
+['Trunks', 'Saiyajin', 'no participa', '95000']
+>>> mejor_candidato("candidatos.txt", "muerto")
+['Cell', 'Androide', 'muerto', '90000']
+    \end{lstlisting}
+
+    \item \texttt{actualizar\_puntaje(archivo, nombre, puntaje\_nuevo)} que actualiza el \texttt{puntaje} del candidato \texttt{nombre} en el archivo \texttt{archivo}.
+
+    \begin{lstlisting}[style=consola]
+>>> actualizar_puntaje("candidatos.txt", "Freezer", 200000)
+>>> mejor_candidato("candidatos.txt", "muerto")
+['Freezer', 'Freezer', 'muerto', '200000']
+    \end{lstlisting}
+
+\end{itemize}

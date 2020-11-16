@@ -1,0 +1,2 @@
+for pais,capital in capitales:
+    print('La capital de', pais, 'es', capital)

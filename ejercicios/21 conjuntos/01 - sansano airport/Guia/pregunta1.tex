@@ -1,0 +1,99 @@
+\section{Sansano Airport}
+
+  El aeropuerto internacional SansanoAirport desea
+  mantener la información acerca de las salidas
+  y llegadas de sus distintos vuelos;
+  para ello,
+  a implementado un sistema de información
+  basado en Python,
+  utilizado,
+  desarrollado y mantenido por Sansanos.
+  La base de dicho sistema
+  es un \texttt{diccionario}
+  llamado \texttt{SansaVuelos}
+  el cual almacena la información
+  de cada uno de los vuelos.
+  
+  La clave del \texttt{diccionario}
+  es un \texttt{String} que representa el código
+  del vuelo y el valor del \texttt{diccionario}
+  es una \texttt{tupla} compuesta respectivamente
+  por el \textbf{nombre} de la aerolínea,
+  el lugar de \textbf{partida},
+  \textbf{destino},
+  una lista de \texttt{String} con las \textbf{escalas}
+  y el \textbf{tiempo promedio}
+  de todos los vuelos realizados entre partida y destino
+  (medido en minutos).
+  
+  \begin{lstlisting}[style=mypy]
+    SansaVuelos = {
+      # codigo: (nombre, partida, destino, escalas, tiempo_promedio),
+      'NH217': ('All Nippon Airways','Tokyo','Santiago', ['Atlanta'],1620),
+      'AY154': ('Finnair','Helsinki','Moscu', ['Riga'], 175),
+      'OV171': ('Estonian Air','Tallin','Paris', ['Amsterdam','Berlin'], 205)}
+  \end{lstlisting}
+  
+  También se cuenta con un \texttt{diccionario Vuelo},
+  cuya clave es un entero \textbf{identificador},
+  y cuyo valor es una \texttt{tupla}
+  compuesta respectivamente por el \textbf{código}
+  del vuelo y una \textbf{fecha}
+  (en forma de tupla (año, mes, día)).
+  
+  \begin{lstlisting}[style=mypy]
+    Vuelo = {
+      # identificador: codigo, fecha
+      3542: ('AY154', (2013,12,25)),
+      6433: ('NH217', (2013,12,31)),
+      1313: ('NH217', (2013,11,6))}
+  \end{lstlisting}
+  
+  \begin{itemize}
+  \item[a)]
+    Escriba la función 
+    \texttt{vuelos\_entre\_fechas(fecha1,fecha2,Vuelo)}
+    que reciba un par de fechas y \texttt{Vuelo},
+    y retorne el \texttt{conjunto} de todos los
+    códigos de vuelos que se hayan realizado entre esas
+    dos fechas.
+
+    \begin{lstlisting}[style=consola]
+      >>> vuelos_entre_fechas((2013,7,22),(2014,7,22),Vuelo)
+      set(['AY154', 'NH217'])
+    \end{lstlisting}
+  \item[b)]
+    Programe 
+    \texttt{vuelos\_agotadores(fecha1,fecha2,Vuelos, SansaVuelos)}
+    que reciba un par de fechas y los \texttt{diccionarios}
+    \texttt{Vuelo} y \texttt{SansaVuelos}
+    y retorne un \texttt{conjunto}
+    con los códigos de los vuelos realizados entre dichas fechas
+    (ambas inclusive) y que sean considerados como \emph{agotadores}.
+    Un vuelo es considerado como agotador si tiene tres o más escalas
+    o si su tiempo promedio de vuelo es igual o superior a 8 horas.
+
+    \begin{lstlisting}[style=consola]
+      >>> vuelos_agotadores((2013,7,22),(2014,7,22),Vuelo,SansaVuelos)
+      set(['NH217'])
+    \end{lstlisting}
+  \item[c]
+    Escriba la función
+    \texttt{vuelos(partida,destino, Vuelo, SansaVuelos)}
+    que recibe un par de \texttt{Strings}
+    con el nombre de la ciudad de partida
+    y la ciudad de destino y los
+    \texttt{diccionarios}
+    \texttt{Vuelo} y \texttt{SansaVuelos}.
+    Esta función debe retornar una lista de tupĺas,
+    en donde cada tupla está compuesta por el \textbf{código}
+    del vuelo,
+    el \textbf{nombre} de la aerolínea
+    y una lista con las fechas en las que se ha
+    efectuado dicho viaje.
+    
+    \begin{lstlisting}[style=consola]
+      >>> vuelos('Helsinki','Moscu', Vuelo, SansaVuelos)
+      [('AY154', 'Finnair', [(2013, 12, 25)])]
+    \end{lstlisting}
+  \end{itemize}

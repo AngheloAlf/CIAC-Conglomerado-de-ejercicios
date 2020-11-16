@@ -1,0 +1,77 @@
+\pagebreak[4]
+\section{Rutas de Ciclismo}
+
+  Anacleta, ciclista apasionada,
+  planifica su próxima ruta usando mapas
+  que descargó de internet.
+  cada mapa es un diccionario que asocia
+  a cada ciudad el conjunto de sus ciudades vecinas.
+  Dos ciudades son vecinas cuando hay un camino directo
+  que las une.
+  
+  \begin{figure}[H]
+    \centering
+    \pgfimage[width=14cm]{fotos/foto1.png}
+  \end{figure}
+  
+  Anacleta desea planificar una ruta
+  (es decir, una secuencia de ciudades para visitar)
+  y ver si es posible hacerla
+  en el mismo orden que a ella le interesa.
+  No obstante,
+  ella no se siente capacitada para hacer
+  trayectos muy largos,
+  por lo que en un día sólo le interesa
+  ir de una ciudad a otra vecina.
+  
+  \begin{itemize}
+  \item[a.-]
+    Escriba la función 
+    \texttt{son\_vecinas(mapa, p, q)}
+    que retorne un valor booleano indicando
+    si las ciudades \texttt{p} y \texttt{q}
+    son o no vecinas en el \texttt{mapa}
+    (es decir,
+    si se puede ir directamente de
+    \texttt{p} a \texttt{q}
+    sin pasar a través de ninguna ciudad.
+    \begin{lstlisting}[style=consola]
+    >>> son_vecinas(mapa, 'A', 'B')
+    True
+    >>> son_vecinas(mapa, 'C', 'G')
+    False
+    \end{lstlisting}
+  \item[b.-]
+    Escriba la función 
+    \texttt{tienen\_vecino\_en\_comun(mapa, p, q)}
+    que retorne un valor booleano
+    indicando si las ciudades
+    \texttt{p} y \texttt{q}
+    tienen o no un vecino común
+    en el \texttt{mapa}
+    (es decir,
+    si se puede ir
+    de \texttt{p} a \texttt{q}
+    pasando a través de una sola otra ciudad).
+    \begin{lstlisting}[style=consola]
+    >>> tienen_vecino_en_comun(mapa, 'C', 'E')
+    True
+    >>> tienen_vecino_en_comun(mapa, 'A', 'F')
+    False
+    \end{lstlisting}
+  \item[c.-]
+    Escriba la función
+    \texttt{existe\_ruta(mapa, ruta)}
+    que retorne un valor booleano
+    indicando si es posible hacer la
+    \texttt{ruta}
+    en el orden indicado.
+    El parámetro \texttt{ruta}
+    es una lista de ciudades.
+    \begin{lstlisting}[style=consola]
+    >>> existe_ruta(mapa, ['E', 'D', 'G', 'B', 'A'])
+    True
+    >>> existe_ruta(mapa, ['A', 'B', 'C', 'D', 'E'])
+    False
+    \end{lstlisting}
+  \end{itemize}

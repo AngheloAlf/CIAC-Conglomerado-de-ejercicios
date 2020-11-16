@@ -1,0 +1,45 @@
+\section{Manejo de datos numéricos}
+
+Existen dos tipos de datos que representan números: los enteros de tipo \texttt{int} como \texttt{-1},\texttt{0},\texttt{1313} y los flotantes (o reales) del tipo \texttt{float} como \texttt{3.1415}, \texttt{2.718}, \texttt{2.0}.
+
+Una operación entre enteros dará como resultado un número entero, una operación mixta dará como resultado un número flotante y una operación entre flotantes dará como resultado un número flotante. Por ejemplo
+
+\begin{lstlisting}[style=consola]
+>>>3/4
+0
+>>>3+1.0
+4.0
+>>>3.0/4
+0.75
+\end{lstlisting}
+
+Los datos que se ingresan a través del comando \texttt{raw\_input()} son transformados a string por Python, por lo que es conveniente transformarlos a entero o flotante dependiendo de nuestra intención:
+
+\begin{lstlisting}[style=consola]
+entero=int(raw_input('Ingrese numero entero: '))
+flotante=float(raw_input('Ingrese numero flotante'))
+\end{lstlisting}
+
+El escribir \texttt{variable=str(raw\_input( ... ))} es repetir un proceso, provoca risas en los ayudantes y/o profesores correctores y hace que Guido Van Rossum (creador del lenguaje) llore por las noches.
+
+
+Considerando esto trabaje en:
+\begin{itemize}
+    \item Un programa que pida 3 números e informe del promedio de ellos
+    \begin{lstlisting}[style=consola]
+    Ingrese primer numero: 5
+    Ingrese segundo numero:9.7
+    Ingrese tercer numero:-4
+    El promedio de los numeros es 3.567
+    \end{lstlisting}
+    
+    \item Un programa que, recibiendo una hora específica, indique cuanto tiempo falta para otra hora ingresada en formato HH:MM (omita el hecho de que HH o MM quede con sólo un número, problemas de este tipo los abordaremos conociendo estructuras condicionales)
+    
+    \begin{lstlisting}[style=consola]
+    Ingrese las horas actuales:17
+    Ingrese los minutos actuales:45
+    Ingrese las horas siguientes:23
+    Ingrese los minutos siguientes:00
+    Son las 17:45 y para que sean las 23:0 queda 5:15 
+    \end{lstlisting}
+\end{itemize}
