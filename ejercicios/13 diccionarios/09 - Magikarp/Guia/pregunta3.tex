@@ -1,0 +1,52 @@
+%%%Pregunta 3
+\section{Magikarp}
+
+Ash Mostasa, el mayor entrenador y criador Pokémon de pueblo Raqueta ha decidido entrar a la gran competencia de saltos de Magikarps, por lo cual ha decidido capturar muchisimos Magikarps con el fin de encontrar el mejor y entrenarlo como todo un campeon.
+
+El problema de capturar tantos Magikarps, es que son demsiados como para ordenarlos al ojo y necesita ayuda, por lo cual ha pedido ayuda a los estudiantes de programacion del CIAC para que les cree un programa que organice a su gran coleccion de Magikarps.
+
+Ash Mostasa no sabe mucho de programacion, pero de todas formas le ha entregado unas estructuras de datos para almacenar a sus Magikarps como las de los siguientes ejemplos:
+
+La primera es \texttt{nombres}, la cual es un diccionario que relaciona el nombre que Ash le puso y una ID de Magikarp:
+
+\begin{lstlisting}[style=consola]
+nombres = {'Karposo': 2, 'Doradito': 13, 'Doratido II': 21,
+'Manchitas': 3, 'Magikarp': 1,
+#...,
+'Blanquito': 5}
+
+\end{lstlisting}
+
+Esta el diccionario \texttt{tamano}, el cual relaciona a los ID con una tupla que contiene el largo, alto y peso del Magikarp en cuestion:
+
+\begin{lstlisting}[style=consola]
+tamano = {1: (15, 10, 5), 2: (12, 11, 8), 3: (17, 4, 10), 
+5: (25, 6, 30), 8: (14, 4, 9),  13: (14, 4, 10), 
+# ...,
+21: (20, 7, 15)}
+\end{lstlisting}
+
+El diccionario \texttt{niveles}, el cual relaciona a los ID con el nivel del Magikarp.
+
+\begin{lstlisting}[style=consola]
+niveles = {1: 18, 2: 32, 3: 5, 
+5: 12, 8: 27,  13: 9, 
+# ...,
+21: 37}
+\end{lstlisting}
+
+El señor Mostasa le ha pedido que el programa debe poder agregar mas Magikarps, quitar Magikarps, mostrar todos los datos de cada Magikarp (una lista de tuplas de Magikarps), actualizar los datos de un Magikarp, contar cuantos Magikarps hay que tengan mas del puntaje ingresado por el usuario y cuantos tienen menos que eso y, por ultimo, mostrar el nombre del mejor Magikarp.
+
+Para saber cual es el mejor Magikarp, el señor Mostasa le ha facilitado la siguiente formula:
+
+\begin{center}
+	\begin{align*}
+		puntaje &= \frac{largo * alto * peso}{nivel}
+	\end{align*}
+\end{center}
+
+Donde el mejor Magikarp es aquel que tiene el puntaje mas bajo de todos. Si hay mas de un Magikarp que compartan el mejor puntaje, debe mostrarlos todos. 
+
+El señor Mostasa tambien le ha pedido que el programa se cierre cuando el lo pida, no que sea automatico.
+
+NOTA: Puede crear todas las funciones que estime conveniente.

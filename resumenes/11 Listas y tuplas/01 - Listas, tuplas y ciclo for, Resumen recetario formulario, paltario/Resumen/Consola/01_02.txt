@@ -1,0 +1,5 @@
+>>> (nombre, apellido) = ('Miguel', 'Godoy')
+>>> nombre
+'Miguel'
+>>> apellido
+'Godoy'

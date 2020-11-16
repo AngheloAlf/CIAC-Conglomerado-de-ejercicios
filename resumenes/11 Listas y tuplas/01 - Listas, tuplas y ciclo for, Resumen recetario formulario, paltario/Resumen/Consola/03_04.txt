@@ -1,0 +1,1 @@
+capitales=[('Chile','Santiago'),('Argentina','Bs. Aires'),('Alemania','Berlin')]

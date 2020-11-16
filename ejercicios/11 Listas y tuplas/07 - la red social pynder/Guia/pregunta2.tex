@@ -1,0 +1,45 @@
+\section{La red social Pynder. }
+Una innovadora aplicación de citas en línea llamada \textbf{Pynder}, dirigida al público estudiante de la USM, tiene almacenados sus datos en una lista de usuarios con tuplas como elementos de la forma \texttt{(nombre, genero, lista de intereses, contador de likes)}:
+
+\begin{lstlisting}[style=consola]
+usuarios=[
+    ('Miguel','masculino',['musica','programacion','breaking bad'],4),
+    ('Chavo del 8','masculino',['tortas de jamon','enojar a Don Ramon'],3),
+    ('Rupertina','femenino',['campo','MCC','Ruperto'],6),
+    ('Walter White','masculino',['cocina','metanfetamina','quimica'],2),
+    #...
+    ]
+\end{lstlisting}
+
+Se le pide a usted, alumno dedicado con la programación que estudia a tiempo para los certámenes y que por nada del mundo dejaría cosas para última hora, que programe las siguientes funciones:
+
+\begin{itemize}
+    \item[a.] Desarrolle \texttt{filtro\_por\_genero(genero,usuarios)} que retorne una lista de tuplas con el nombre de usuario, y su lista de intereses al recibir un género y una lista de usuarios.
+\begin{lstlisting}[style=consola]
+>>>filtro_por_genero('femenino',usuarios)
+[('Rupertina',['campo','MCC','Ruperto'])]
+\end{lstlisting}
+    \item[b.] Programe \texttt{filtro\_por\_interes(intereses,usuarios)} que devuelva los nombres de los usuarios y los intereses encontrados de la forma \texttt{(nombre, lista de intereses)} y la lista de usuarios.\\
+    Nota: es necesario que el usuario tenga al menos un interés de los recibidos para ser agregado a la lista final.
+\begin{lstlisting}[style=consola]
+>>> filtro_por_interes(['programacion','cocina'],usuarios)
+[('Miguel', ['musica', 'programacion', 'breaking bad']), 
+('Walter White', ['cocina', 'metanfetamina', 'quimica'])]
+\end{lstlisting}
+    \item[c.] Desarrolle la función \texttt{dar\_like(nombre,usuarios)} que recibiendo el nombre de usuario modifique la lista usuarios, y la tupla correspondiente agregando un like. La función no retorna nada.
+\begin{lstlisting}[style=consola]
+>>> usuarios
+('Miguel', 'masculino', ['musica', 'programacion', 'breaking bad'], 4)
+('Chavo del 8', 'masculino', ['tortas de jamon', 'enojar a Don Ramon'], 3)
+('Rupertina', 'femenino', ['campo', 'MCC', 'Ruperto'], 6)
+('Walter White', 'masculino', ['cocina', 'metanfetamina', 'quimica'], [*2*])
+
+>>> dar_like('Walter White',usuarios)
+
+>>> usuarios
+('Miguel', 'masculino', ['musica', 'programacion', 'breaking bad'], 4)
+('Chavo del 8', 'masculino', ['tortas de jamon', 'enojar a Don Ramon'], 3)
+('Rupertina', 'femenino', ['campo', 'MCC', 'Ruperto'], 6)
+('Walter White', 'masculino', ['cocina', 'metanfetamina', 'quimica'], [*3*])
+\end{lstlisting}
+\end{itemize}

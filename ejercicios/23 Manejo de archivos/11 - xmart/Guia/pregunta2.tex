@@ -1,0 +1,78 @@
+\section{Xmart}
+
+  La empresa de videojuegos Xmart
+  maneja los juegos en venta y preventa
+  en dos archivos diferentes con la siguiente estructura:
+  \texttt{titulo;empresa},
+  como por ejemplo los siguientes:
+  
+  \begin{lstlisting}[style=consola, caption=\texttt{venta.txt}]
+  starcraft ii;blizzard
+  the last of us;naughty dog
+  \end{lstlisting}
+  
+  \begin{lstlisting}[style=consola, caption=\texttt{preventa.txt}]
+  uncharted 4;naughty dog
+  the witcher 3;cd projekt RED
+  sims 4;EA
+  \end{lstlisting}
+  
+  Los archivos anteriores son ejemplos,
+  pueden contener más juegos y no necesariamente
+  se llaman \\
+  \texttt{venta.txt} y
+  \texttt{preventa.txt}.
+  
+  \begin{itemize}
+  \item[a)]
+    Desarrolle la función
+    \texttt{agregar\_venta(nombre\_archivo, datos)},
+    que reciba como parámetro una variable de tipo string
+    con el nombre del archivo de ventas y los datos del juego
+    como una lista.
+    Debe agregar al final del archivo el juego ingresado,
+    retornando \texttt{True}.
+    En caso de que el nombre del juego ya se encuentre
+    en el archivo,
+    no lo guarda y simplemente retorna
+    \texttt{False}.
+    
+    \begin{lstlisting}[style=consola]
+    >>> [*agregar_venta('venta.txt', [    *]
+      [*'assassins creed iV', 'ubisoft']) *]
+    True
+    \end{lstlisting}
+  \item[b)]
+    Desarrolle la función
+    \texttt{preventa\_a\_venta(archivo\_preventa, titulo)}
+    que reciba como parámetro tres variables de tipo string,
+    una con el nombre del archivo con las ventas,
+    otra con las preventas y la última con el título de un juego.
+    La función crea un nuevo archivo de preventas
+    (a cuyo nombre original se le antepone la palabra
+    \texttt{nueva}),
+    eliminando el juego y agregándolo en el archivo venta,
+    retornando \texttt{True}.
+    En caso de no existir en preventa,
+    no lo guarda y simplemente retorna \texttt{False}.
+    
+    \begin{lstlisting}[style=consola]
+    >>> [*preventa_a_venta('venta.txt', 'preventa.txt', 'sims 4')*]
+    True
+    \end{lstlisting}
+  \item[c)]
+    Desarrolle la función
+    \texttt{buscar\_juegos(archivo\_venta, archivo\_preventa,} \\
+    \texttt{empresa)}
+    que recibe el nombre del archivo de ventas,
+    de preventas y el nombre de una empresa de juegos.
+    La función retorna una lista de tuplas,
+    donde la tupla posee la siguiente estructura
+    (nombre del juego, archivo donde se encuentra).
+    Guíese por el ejemplo.
+    
+    \begin{lstlisting}[style=consola]
+    >>> [*buscar_juegos('ventas.txt', 'preventa.txt', 'naughty dog')*]
+    [('the last of us', 'venta'), ('uncharted 4', 'preventa')]
+    \end{lstlisting}
+  \end{itemize}

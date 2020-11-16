@@ -1,0 +1,74 @@
+\section{Armandose el tarro}
+
+  Pedro es un comprador informado.
+  Cada vez que necesita renovar su computador
+  averigua las características principales del equipo
+  y decide si comprarlo o no siguiendo un criterio 
+  de puntaje.
+  Los criterios utilizados por pedro son los siguientes:
+  
+  \begin{itemize}
+  \item
+    \textbf{RAM}.
+    Pedro considera que un computador con 4 [GB] de memoria
+    corresponde a 2 puntos.
+    A los computadores con menos memoria les asigna 1 puntos
+    y a los que tienen más,
+    3 puntos.
+  \item
+    \textbf{HDD}.
+    Para la capacidad del disco duro,
+    Pedro considera discos entre 
+    500 [GB] y 1 [TB] con 2 puntos.
+    A los discos más pequeños les asigna 1 puntos
+    y a los más grandes,
+    3 puntos.
+  \item
+    \textbf{Precio}.
+    Pedro piensa que un computador es caro
+    si cuesta más de un millón de pesos,
+    a los que les asigna 1 punto.
+    Los computadores mayores o iguales a quinientos mil
+    son considerados con 2.
+    Si el precio es menor,
+    Pedro asigna 3 puntos
+  \end{itemize}
+
+  Pedro quiere comprar un computador para montar
+  un \emph{Media Center},
+  es decir como apoyo para ver videos y películas en un
+  televisor.
+  Por esta razón el factor más importante en la decisión es
+  el disco duro con un peso del 50 \%,
+  seguido por el precio (40\%) y,
+  finalmente,
+  la capacidad de la memoria (10\%).
+  Pedro solo comprará computadores basados en estas reglas
+  que obtengan un puntaje mayor a 2.
+  
+  Escriba un programa en Python que solicite al usuario
+  la cantidad de memoria,
+  disco duro y precio.
+  Luego debe mostrar por pantalla el puntaje del computador
+  y si califica para comprarse.
+  
+  
+  \begin{lstlisting}[style=consola]
+  Bienvenido Usuario!
+  ingrese cantidad de memoria RAM (GB): [*3*]
+  ingrese cantidad de disco duro (GB) : [*600*]
+  ingrese precio (pesos)              : [*800000*]
+  El puntaje del computador es 1.9
+  No se sugiere comprarlo!
+  \end{lstlisting}
+  
+  \begin{lstlisting}[style=consola]
+  Bienvenido Usuario!
+  ingrese cantidad de memoria RAM (GB): [*8*]
+  ingrese cantidad de disco duro (GB) : [*1200*]
+  ingrese precio (pesos)              : [*1200000*]
+  El puntaje del computador es 2.2
+  Vale la pena comprarlo!
+  \end{lstlisting}
+  
+  \pagebreak[4]

@@ -1,0 +1,60 @@
+\section{Andrónico Bank 2 (C3 CC 2015-II)}
+
+  Complementando la pregunta anterior,
+  se le solicita:
+  
+  \begin{itemize}
+  \item[a)]
+    Escriba la función
+    \texttt{nuevo\_cliente(archivo, rut, nombre, clase)}
+    que reciba como parámetro el nombre del archivo de clientes
+    y el rut,
+    nombre y clase de un nuevo cliente.
+    la función debe agregar el nuevo cliente al final del archivo.
+    Esta función retorna \texttt{None}.
+    
+    \begin{lstlisting}[style = consola]
+    >>> [*nuevo_cliente('clientes.txt', '2121211-2', 'Sergio Lagos', 'VIP')*]
+    >>> 
+    \end{lstlisting}
+  \item[b)]
+    Escriba la función
+    \texttt{actualizar\_clase(archivo, rut, clase)}
+    que reciba como parámetro el nombre del
+    \texttt{archivo} de clientes,
+    el \texttt{rut} de un cliente y una nueva \texttt{clase}.
+    La función debe modificar la clase del cliente
+    con el \texttt{rut} indicado,
+    cambiándola por \texttt{clase} en el \texttt{archivo}.
+    Esta función retorna \texttt{True} si logra
+    hacer el cambio o \texttt{False} si no encuentra
+    al cliente con el \texttt{rut} indicado.
+    
+    \begin{lstlisting}[style = consola]
+    >>> [*actualizar\_clase('clientes.txt', '9234539-9', 'Estandar')*]
+    True
+    \end{lstlisting}
+  \item[c)]
+    Escriba una función
+    \texttt{filtrar\_clientes(archivo, clase)}
+    que reciba como parámetros el nombre del archivo de clientes
+    y una clase de cliente.
+    La función debe crear un archivo
+    \texttt{clientes\_[clase].txt}
+    con los rut y los nombres de los clientes
+    pertenecientes a esa clase.
+    Note que el archivo debe ser nombrado según la
+    \texttt{clase} solicitada.
+    Esta función retorna \texttt{None}.
+    
+    \begin{lstlisting}[style = consola]
+    >>> [*filtrar_clientes('clientes.txt', 'VIP')
+    >>>
+    \end{lstlisting}
+    
+    \begin{lstlisting}[style = consola, caption = clientes\_VIP.txt]
+    5555555-6;Sebastian Pinera
+    12312312-1;Michel Bachelet
+    2121211;Sergio Lagos
+    \end{lstlisting}
+  \end{itemize}

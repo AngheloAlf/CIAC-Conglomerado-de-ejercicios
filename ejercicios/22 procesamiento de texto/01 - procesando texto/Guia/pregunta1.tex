@@ -1,0 +1,84 @@
+\section{Funciones para Procesar Texto}
+
+  Una de las técnicas más antiguas para
+  proteger información sensible era el uso de
+  tablas de transposición,
+  en las cuales se cambiaban las letras de los mensajes
+  por otras,
+  según una tabla de conversión,
+  dejando el mensaje original ilegible.
+  Podemos representar una tabla de este tipo por medio
+  de un diccionario como el que sigue:
+  
+  \begin{lstlisting}[style=consola]
+  >>> Tablav = {'a': 'i', 'e': 'u', 'i': 'a', 'o':'e', 'u':'o'}
+  \end{lstlisting}
+  
+  Si intercambiamos las letras como indica el diccionario,
+  la frase: ``esta es la historia de un caballo''
+  se transforma en:
+  ``usti us li hasterai du on cibille''.
+  
+  \begin{enumerate}
+  \item
+    Programe la función
+    \texttt{cifrar\_texto(texto, tabla)}
+    que reciba un texto en formato
+    \texttt{string} y
+    retorne el texto con las vocales intercambiadas
+    según el diccionario \texttt{tabla}.
+  \item
+    Otra técnica usada para asegurar los textos es
+    cambiar palabras por otras.
+    Considere el diccionatio:
+    
+    \begin{lstlisting}[style=consola]
+    >>> Tabla = {'moneda': 'calabaza',
+                 'pablo' : 'estrecho',
+                 'botin' : 'servilleta',
+                 'robo'  : 'abrazo'}
+    \end{lstlisting}
+    
+    Programe la función
+    \texttt{cifrar\_palabras(texto, tabla)}
+    que reciba un \texttt{string} de texto
+    y realice los reemplazos definidos en el diccionario tabla.
+    
+    \begin{lstlisting}[style=consola]
+    >>> [*t = 'el robo en el palacio de la moneda \n  *]
+        [*    fue un exito. el botin lo tiene pablo.'*]
+    >>> [*cifrar_palabras(t, Tabla)*]
+    el abrazo en el palacio de la calabaza fue un exito.
+    el servilleta lo tiene estrecho.
+    \end{lstlisting}
+  \item
+    Considere una lista de receptores del mensaje,
+    como la que sigue:
+    
+    \begin{lstlisting}[style=consola]
+    receptores = [('Pedro', 'Hernandez'),
+                  ('Pietro', 'Morales'),
+                  ('Sandro', 'Maureira')]
+    \end{lstlisting}
+    
+    Programe la función
+    \texttt{envios\_codificados(texto, receptores, tablavocal, tabla)}
+    que aplique los cifrados anteriores al mensaje \texttt{texto}
+    y retorne una lista de textos con el nombre del receptor
+    al comienzo.
+    Utilice la función \texttt{format} para crear la lista de textos.
+    
+    \begin{lstlisting}[style=consola]
+    >>> [*t = 'el robo en el palacio de la moneda \ *]
+        [*    fue un exito. el botin lo tiene pablo.'*]
+    >>> [*envios_codificados(t, receptores, Tablav, Tabla)*]
+    ['Estimado Pedro, Hernandez. ul ibrize un ul pilicae
+     du li cilibizi fou on uxate. ul survalluti le taunu ustruche.',
+     'Estimado Pietro, Morales. ul ibrize un ul pilicae
+     du li cilibizi fou on uxate. ul survalluti le taunu ustruche.', 
+     'Estimado Sandro, Maureira. ul ibrize un ul pilicae 
+     du li cilibizi fou on uxate. ul survalluti le taunu ustruche.']
+    \end{lstlisting}
+  \end{enumerate}
+  
+  \pagebreak[4]

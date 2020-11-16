@@ -1,0 +1,101 @@
+\section{"Pequeño" torpedo}
+
+
+\begin{itemize}
+    \item Variables \\
+En python (por ahora) tenemos 4 tipos de datos o variables: enteros (int), flotantes o reales (float), palabras (strings) y valores de verdad (boolean).
+\begin{lstlisting}[style=consola]
+>>> a = 1
+>>> a
+1
+>>> str(a)
+'1'
+>>> int(a)
+1
+>>> float(a)
+1.0
+>>> bool(a)
+True
+\end{lstlisting}
+
+    \item Operadores \\
+Cada uno de estos tipos de datos tiene distintas operaciones:
+    \begin{itemize}
+        \item Palabras o String\\
+            Aca tenemos suma de palabras y repeticion de $n$ veces (multiplicacion):
+            \begin{lstlisting}[style=consola]
+>>> "Hola" + "Pedro" # Suma
+'HolaPedro'
+>>> "Ole" * 4 # Multiplicacion
+'OleOleOleOle'
+>>> "Ole" * 4.0
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can't multiply sequence by non-int of type 'float'
+            \end{lstlisting}
+        \item Numeros (Enteros o Flotantes)\\
+            Aqui contamos con todos los operadores matematicos comunes:
+            \begin{lstlisting}[style=consola]
+>>> 1+2 #Suma
+3
+>>> 1/2 #Division
+0
+>>> 1/2.0
+0.5
+>>> 1*2 #Multiplicacion
+2
+>>> 1*2.0
+2.0
+>>> 1-2 #Resta
+-1
+>>> 1%2 #Modulo o resto
+1
+>>> 2**3.0 #Potencia
+8.0
+>>> 2**(1.0/2)
+1.4142135623730951
+            \end{lstlisting}
+
+
+        \item Valores de verdad\\
+            Para los valores de verdad tenemos comparadores logico/matematicos, los que siempre nos entregaran un valor de verdad (o valor logico/booleano):
+            \begin{lstlisting}[style=consola]
+>>> 1 < 2 # Menor
+True
+>>> 1 > 2.0 # Mayor
+False
+>>> "Hola" < 2
+False
+>>> 1 <= 1 # Menor igual
+True
+>>> True or False # O
+True
+>>> True and False # Y
+False
+>>> 1 == '1' # Igualdad
+False
+>>> 1 != 1.0 # Desigualdad
+False
+>>> (1 < 2) and ( (2+3) == 5 ) # Combinacion de los anteriores
+True
+            \end{lstlisting}
+    \end{itemize}
+    \item Funciones\\
+        \begin{itemize}
+            \item print\\
+                Sirve para mostrar datos por la pantalla(consola/IDLE)
+            \begin{lstlisting}[style=consola]
+>>> print 1 < 2
+True
+>>> print "Hola" + "Gato"
+HolaGato
+>>> print 1 + "Chao"
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+>>> print "Marta, sos la numero ", 1
+Marta, sos la numero  1
+            \end{lstlisting}           
+        \end{itemize}
+
+\end{itemize}

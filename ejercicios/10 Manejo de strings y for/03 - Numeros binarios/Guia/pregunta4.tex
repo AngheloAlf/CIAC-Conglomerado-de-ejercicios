@@ -1,0 +1,18 @@
+%%% Pregunta 2
+\section{Números binarios}
+
+Un numero binario es una secuencias de 1s y 0s que pueden representar distintas cosas dependiendo de su uso. Uno de sus usos es representar números decimales (los números que usamos a diario, del 0 al 9) como secuencia de 1s y 0s.
+
+Para saber a que número representa una secuencia binaria, hay que multiplicar cada numero de los 1s y 0s de la secuencia, de forma invertida, por potencias de dos. Explicado de otra forma, invertir la secuencia, multiplicar el primer numero (que puede ser tanto un 1 o un 0), por 2 elevado a 0, luego el siguiente numero por 2 elevado a 1, y así sucesivamente hasta completar la secuencia.
+
+Sabiendo esto, escriba la función \texttt{binario\_a\_numero(binario)}, que reciba una secuencia de 1s y 0s, en formato string y retorne el número al cual representa. 
+
+\begin{lstlisting}[style=consola]
+>>> [*binario_a_numero("11001")*]
+25
+\end{lstlisting}
+
+\begin{lstlisting}[style=consola]
+>>> [*binario_a_numero("001011")*]
+11
+\end{lstlisting}

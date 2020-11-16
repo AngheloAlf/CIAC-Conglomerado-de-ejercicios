@@ -1,0 +1,3 @@
+cadena='Programacion'
+for caracter in cadena:
+    print(caracter, end="")

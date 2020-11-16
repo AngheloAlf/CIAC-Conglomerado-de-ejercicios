@@ -1,0 +1,27 @@
+\section*{Resumen resumidor resumido}
+
+\begin{center}
+	\begin{tabular}{|A{3cm}|S{3cm}|S{3cm}|S{3cm}|S{3cm}|}
+	\hline
+	Acción & Listas & Tuplas & Diccionarios & Conjuntos \\
+	\hline
+	Particularidad & Lista mutable de datos ordenados. & Lista inmutable de datos ordenados. & Asociación de pares, llaves y valores. \newline Llaves únicas. & Conjunto de elementos únicos. \\
+	\hline
+	Crear & lista = list() \newline lista = [] & tupla = tuple() \newline tupla = () & dicc = dict() \newline dicc = \{\} & conj = set() \\
+	\hline
+	Agregar elementos & lista.append(x) \newline lista.insert(i, x) & No se puede. & dicc[llave] = valor & conj.add(x) \\
+	\hline
+	Concatenación & lista += otraLista & a = tupla + otraTupla & No se puede. & No se puede. \\
+	\hline
+	Obtener elementos & a = lista[i] & b = tupla[i] & c = dicc[llave] & No tiene índices. \newline Hay que recorrerlo. \\
+	\hline
+	Reemplazar elementos & lista[i] = a & No se puede. & dicc[llave] = c & No se puede. \\
+	\hline
+	Eliminar elementos & lista.remove(x) \newline del lista[i] & No se puede. & del dicc[llave] & conj.remove(x) \\
+	\hline
+	Funciones especiales & Ordenar crecientemente: lista.sort() \newline Invertir:  lista.reverse() \newline Indice: lista.index(x) & No. & Lista de llaves: dicc.keys() \newline Lista de valores:  dicc.values() \newline Lista de tuplas de llave y valor: dicc.items() & Intersección: a \& b \newline Unión: a | b \newline Diferencia: a - b \newline Diferencia simétrica: a \textasciicircum b \newline Subconjunto: a < b \\
+	\hline
+	\end{tabular}
+\end{center}
+
+\newpage

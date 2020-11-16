@@ -1,0 +1,36 @@
+\section{Certamen 1 - 2014-1 - Pregunta2}
+
+En Chili hay empresas pequeñas, cuando tienen utilidades bajo \$50 millones; medianas, aquellas que recaudan desde \$50 millones y hasta \$80 millones; y grandes, empresas con utilidades
+sobre \$80 millones.
+
+Actualmente, la presidenta Myshell implementara una nueva ley tributaria para recaudar más fondos para el gobierno y poder \sout{entregar más sobre-sueldos} mejorar la educación. Ésta exige a las empresas grandes pagar un 40\% de las utilidades al fisco (impuestos), un 30\% a las empresas medianas y un 25 \% a las empresas pequeñas. Como esta ley no existe en ninguna otra parte del mundo, no se sabe como afectara realmente en la economía de un país. Sin embargo, tras un analisis se a determinado lo siguiente: 
+\begin{itemize}
+    \item Toda empresa grande que pague mas de \$64 millones en impuestos se va al extranjero y no paga impuestos en Chili. De lo contrario, si paga \$36 millones o mas, esta se divide en dos empresas y reparte las utilidades igualmente entre ambas, pagando el impuesto que le corresponda sin trucos. En cualquier otro caso paga el impuesto correspondiente.
+    \item Las empresas medianas que ganan sobre \$70 millones de pesos contratan un buen contador que les hace pagar un 30\% menos de impuesto de lo que deberían pagar. Si ganan sobre \$60 millones contratan un contador mediocre que solo les ahorra un 10\% de lo que deberían pagar. En todo otro caso pagan lo que corresponde.
+    \item Las empresas pequeñas siempre pagan todo el impuesto que corresponde. Sin embargo, si ganan menos de \$20 millones, como no tienen recursos para un contador, siempre cometen errores en su declaración de impuestos y por ello se les suma una multa del 20\% de lo que pagan en impuestos.
+\end{itemize}
+
+
+Ahora usted debe ayudar a Myshell e implementar una aplicacion que permita simular cuanto dinero recuadara el estado. Para ello, debe crear una funcion que reciba como parametro la utilidad de una empresa y retornar lo que recaudaria el estado siguiendo las normas antes mencionadas.
+
+A continuacion, se presentan ejemplos de la ejecucion de la funcion.
+
+Nota: Considere que los valores de las utilidades ingresados están en millones de pesos.
+
+\begin{lstlisting}[style=consola]
+>>> [*impuestosRecaudados(155)*]
+46.5
+>>> [*impuestosRecaudados(30)*]
+7.5
+>>> [*impuestosRecaudados(57)*]
+17.1
+>>> [*impuestosRecaudados(88)*]
+35.2
+>>> [*impuestosRecaudados(120)*]
+36.0
+>>> [*impuestosRecaudados(43)*]
+10.75
+>>> [*impuestosRecaudados(12)*]
+3.6
+
+\end{lstlisting}

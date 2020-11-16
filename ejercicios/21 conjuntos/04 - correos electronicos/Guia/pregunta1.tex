@@ -1,0 +1,33 @@
+\section{Correos electrónicos}
+
+El dominio de un correo electrónico es la parte que va después del @. Suponiendo que \texttt{correos} es un diccionario cuyas llave son correos electrónico y sus valores son tuplas de la forma \texttt{(CorreosRecibidos, CorreosEnviados)} programe:
+
+\begin{lstlisting}[style=consola]
+correos={'miguel.godoy.13@sansano.usm.cl':(1315,165),
+         'magodoydiaz@gmail.com':(1126,268),
+         'cristiano.ronaldo@gmail.com':(34202,45),
+         'donfrancisco@yaju.es':(2450003,301),
+         'federico.santama@alumnos.usm.cl':(315,8)}
+\end{lstlisting}
+
+\begin{itemize}
+    \item[a.] Una función \texttt{dominios(correos)} que reciba el diccionario \texttt{correos} y retorne un conjunto con los dominios existentes.
+    
+    \item[b.] Una función \texttt{total(correos,seImprime)} que reciba el diccionario \texttt{correos} y un valor booleano si se desea imprimir, y retorne un diccionario donde la llave es el correo y el valor es la suma de los correos recibidos y enviados. Esta función imprimirá el total global de correos, es decir la suma de todos los valores si \texttt{seImprime} es True.
+    \begin{lstlisting}[style=consola]
+>>> total(correos,True)
+Correos totales:  2487748
+{'miguel.godoy.13@sansano.usm.cl': 1480,
+'federico.santama@alumnos.usm.cl': 323,
+'magodoydiaz@gmail.com': 1394,
+'donfrancisco@yaju.es': 2450304,
+'cristiano.ronaldo@gmail.com': 34247}
+    \end{lstlisting}
+    
+    \item[c.] Una función \texttt{mayorUso(correos)} que reciba el diccionario \texttt{correos} y retorne el correo electrónico que más correos haya enviado y recibido.
+    
+    \begin{lstlisting}[style=consola]
+>>> mayorUso(correos)
+'donfrancisco@yaju.es'
+    \end{lstlisting}
+\end{itemize}

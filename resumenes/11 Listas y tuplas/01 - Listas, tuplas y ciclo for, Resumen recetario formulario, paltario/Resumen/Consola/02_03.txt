@@ -1,0 +1,2 @@
+lista.remove(elemento) #Conociendo el elemento a eliminar
+del lista[indice] #Conociendo el indice del elemento a eliminar

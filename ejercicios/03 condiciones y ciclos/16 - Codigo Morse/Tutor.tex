@@ -1,0 +1,127 @@
+\documentclass[spanish, fleqn]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage[headheight=47pt, paper=a4paper, top=3cm, left=2cm, right=2cm]{geometry}
+\usepackage{tikz}
+\usepackage{CIACcustom}
+\usepackage{fourier}
+\usepackage{amsmath, amsthm}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage[urlcolor=blue, colorlinks]{hyperref}
+\usepackage{booktabs,tabularx}
+\usepackage{float}
+
+\newcolumntype{L}[1]{>{\hsize=#1\hsize\raggedright\arraybackslash}X}%
+\newcolumntype{R}[1]{>{\hsize=#1\hsize\raggedleft\arraybackslash}X}%
+\newcolumntype{C}[2]{>{\hsize=#1\hsize\columncolor{#2}\centering\arraybackslash}X}%
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\pgfimage[width=2.5cm]{imagenes/logo-ciac.png}}
+\chead{
+  Apoyos Intensivos Pauta Tutor N° 1\\
+  IWI-131 Semestre I-2017 \\
+  CIAC Casa Central
+}
+\lhead{\pgfimage[width=2.5cm]{imagenes/logo-usm.jpg}}
+\rfoot{\LaTeXe / CIAC 2017}
+\lfoot{\thepage}
+
+\renewcommand{\ttdefault}{pcr}
+
+%%% listings settings:
+\definecolor{bggray}{rgb}{0.95,0.95,0.95}
+\lstdefinestyle{consola}{
+  backgroundcolor=\color{bggray},
+  basicstyle=\small\ttfamily,
+  frame=single,
+  moredelim=[is][\bfseries]{[*}{*]},
+  xrightmargin=5pt
+}
+
+\lstdefinestyle{mypy}{
+  language=python,
+  backgroundcolor=\color{bggray},
+  basicstyle=\ttfamily\small\color{orange!70!black},
+  frame=L,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{red},
+  numbers=left,
+  showstringspaces=false,
+  xrightmargin=5pt,
+  xleftmargin=10pt
+}
+
+\newtheorem{CIACdef}{Definición}
+
+\begin{document}
+\vspace*{-0.4cm}
+\section*{Pauta Tutor - Intensivo Programación}
+
+\begin{itemize}
+    \item 19:00 -   10-15 minutos para presentación
+    \begin{enumerate}
+        \item Nombres, carreras y tiempo trabajando
+        
+        \item Objetivo de los intensivos e historia, en el caso de progra el intensivo es de tipo taller, excepcionalmente se harán diapositivas
+        
+        \item Reglas del juego (Chiste por preguntar si el programa corre teniendo el computador al frente)
+        
+        \item No hay problema con llegar atrasado, pero tendrá que esperar por la guía
+        
+        \item La asistencia es voluntaria, no anotar a sus amigos en las listas, no salir sin estar en la lista
+        
+        \item Hablar de apoyos personalizados y posible BNA
+        
+        \item Python es el lenguaje más fácil para aprender algoritmos
+    \end{enumerate}
+        
+    \item 19:15 -   20-30 minutos para diapositivas de diagrama de flujo, funciones y condiciones
+    
+    \item 19:35 -   40-50 minutos para trabajo individual/grupal con consultas
+    
+    \item 20:20 -   10 minutos para retirar computadores y resolver preguntas finales
+\end{itemize}
+
+\section{Manejo de strings}
+
+  \paragraph{Solución}
+  A continuación se expone el código de los ejercicios de la sección.
+  
+  \lstinputlisting[
+    style  = mypy,
+    caption= \texttt{Pauta}]{Pauta/1.py}
+    
+\section{Manejo de datos numéricos}
+
+    \paragraph{Solución}
+    A continuación se expone el código de los ejercicios de la sección, por motivos de espacio la frase final del ejercicio 2 se dividió en 3 variables.
+    
+    \lstinputlisting[
+    style =mypy,
+    caption= \texttt{Pauta}]{Pauta/2.py}
+
+\section{Entrada a la Disco}
+
+    \paragraph{Solución}
+    A continuación se expone el código del ejercicio, tenga en cuenta que pueden existir más formas, pero aqui se ejemplifica el uso de todas las estructuras condicionales disponibles en un bloque.
+    
+    \lstinputlisting[
+    style =mypy,
+    caption= \texttt{Pauta}]{Pauta/3.py}
+    
+\section{Código Morse}
+
+    \paragraph{Solución}
+    A continuación se expone el código del ejercicio, tenga en consideración que se pide programar una función, por lo que debe existir un retorno del tipo string, y no una impresión por pantalla.
+    
+    \lstinputlisting[
+    style =mypy,
+    caption= \texttt{Pauta}]{Pauta/4.py}
+    
+
+\end{document}

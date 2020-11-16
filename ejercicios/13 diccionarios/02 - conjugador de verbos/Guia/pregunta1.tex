@@ -1,0 +1,43 @@
+\section{Conjugador de verbos}
+Escriba un programa que reciba como entrada el infinitivo de un verbo regular y a continuación muestre su conjugación en tiempo presente.
+
+\begin{lstlisting}[style=consola]
+Ingrese verbo: [*programar*]
+yo programo
+tu programas
+el programa
+nosotros programamos
+vosotros programais
+ellos programan
+\end{lstlisting}
+
+\begin{lstlisting}[style=consola]
+Ingrese verbo: [*beber*]
+yo bebo
+tu bebes
+el bebe
+nosotros bebemos
+vosotros bebeis
+ellos beben
+\end{lstlisting}
+
+\begin{lstlisting}[style=consola]
+Ingrese verbo: [*vivir*]
+yo vivo
+tu vives
+el vibe
+nosotros vivimos
+vosotros vivis
+ellos viven
+\end{lstlisting}
+
+\textbf{Hint:} Cree un diccionario para asociar cada terminación (-ar, -er, -ir) a sus declinaciones y una lista para guardar los pronombres en orden, como los siguientes.
+
+\begin{lstlisting}[style=consola]
+pronombres=['yo','tu','el','nosotros','ustedes','ellos']
+
+declinaciones={'ar':['o','as','a','amos','ais','an'],
+       'er':['o','es','e','emos','eis','en'],
+       'ir':['o','es','e','imos','is','en']}
+\end{lstlisting}
+

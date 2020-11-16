@@ -1,0 +1,41 @@
+\section{Cumpleaños}
+Se tiene un diccionario \texttt{fechas} cuya llave es el nombre de un ser viviente y su valor es una tupla de la forma \texttt{anio,mes,dia} que indica la fecha de nacimiento del personaje.
+
+\begin{lstlisting}[style=consola]
+fechas={
+    'Mike':(1994,7,19),
+    'Gary':(1989,5,22),
+    'Brad':(1975,5,22),
+    'Angie':(1984,5,22),
+    'Peter':(1967,12,4),
+    'Larry':(2001,3,14),
+    'Moe':(2000,12,4)
+    #...
+    }
+\end{lstlisting}
+
+Se le pide a usted programar las siguientes funciones:
+
+\begin{itemize}
+\item[a.] \texttt{masViejo(fechas)} que reciba el diccionario \texttt{fechas} y retorne el nombre del personaje con más edad.
+
+\begin{lstlisting}[style=consola]
+>>> [*masViejo(fechas)*]
+'Peter'
+\end{lstlisting}
+
+\item[b.] \texttt{primerCumple(fechas)} que reciba el diccionario \texttt{fechas} y retorne el nombre del personaje cuyo cumpleaños es el primero del año.
+
+\begin{lstlisting}[style=consola]
+>>> [*primerCumple(fechas)*]
+'Larry'
+\end{lstlisting}
+
+\item[c.] \texttt{quienesCompartenCumple(fechas)} que reciba el diccionario \texttt{fechas} y retorne un diccionario cuya llave sea una tupla de la forma \texttt{(mes,dia)} y su valor un conjunto con los nombres de los personajes que tienen cumpleaños el mismo día. Note que no importa el año en que nacieron, y que el diccionario que retorna no puede tener algún elemento cuyo conjunto (asociado al valor) tenga sólo un personaje.
+
+\begin{lstlisting}[style=consola]
+>>> [*quienesCompartenCumple(fechas)*]
+{(5, 22): set(['Brad', 'Angie', 'Gary']), (12, 4): set(['Peter', 'Moe'])}
+\end{lstlisting}
+
+\end{itemize}

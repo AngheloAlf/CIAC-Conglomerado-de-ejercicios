@@ -1,0 +1,16 @@
+\section{Desafío: regresión lineal por mínimos cuadrados}
+
+El método de los mínimos cuadrados de Gauss es un método de aproximación de puntos a un polinomio. Con esto se tiene una lista de puntos, en forma de tupla ($x_{i},y_{i}$) aproximable a una función lineal $y=a \cdot x + b$, donde los coeficientes son:
+
+\begin{displaymath}
+	a= \frac{n \sum x_{i} y_{i} - \sum x_{i} \sum y_{i}}
+	{n \sum (x_{i})^{2} -(\sum x_{i})^{2}}
+\end{displaymath}
+\begin{displaymath}
+	b=\overline{y} - a \overline{x}
+\end{displaymath}
+Donde $n$ es la cantidad de puntos, $\overline{x}$, $\overline{y}$ promedios de los puntos $x$ e $y$ de la lista entregada.
+\begin{lstlisting}[style=consola]
+puntos=[(101.86,273),(109.26,293),(112.59,303),
+(116.11,313),(119.56,323),(123.07,333)]
+\end{lstlisting}

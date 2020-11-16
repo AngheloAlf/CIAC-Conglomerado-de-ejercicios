@@ -1,0 +1,44 @@
+\section{Volcanes y cerros}
+
+Una agencia turistica le pide hacer un programa de gestion de volcanes, y como ya habra adivinado, ¡es con archivos de texto!, pero esta empresa le ha pedido una condicion especial para estos archivos, deben tener una estructura como la del siguiente ejemplo:
+
+\begin{center}
+	chile.txt
+	\begin{lstlisting}[style=consola]
+Estos son los volcanes de Chile:
+
+PARINACOTA;NORTE-VOLCAN-6342
+LICANCABUR;NORTE-VOLCAN-5916
+PULGAR;NORTE-CERRO-6233
+SAN RAMON;CENTRO-CERRO-3125
+EL PLOMO;CENTRO-CERRO-5530
+MAIPO;CENTRO-VOLCAN-5264
+VILLARRICA;SUR-VOLCAN-2847
+CALBUCO;SUR-VOLCAN-2003
+OSORNO;SUR-VOLCAN-2652
+
+-------------------------------
+
+Altura promedio de volcanes: 4434
+	\end{lstlisting}
+\end{center}
+
+Donde la primera linea es la frase \textit{Estos son los volcanes de \texttt{pais}:}, donde \texttt{pais} es el mismo dato que el nombre del archivo, pero sin el \texttt{.txt} y con la primera letra mayuscula y el resto en minuscula. 
+
+Luego viene un espacio en blanco y le sigue la informacion de todos los volcanes, donde la estructura de cada linea es: \texttt{nombre:zona-tipo-altura}. Cabe destacar que estos datos estan ordenados segun la zona, donde primero vienen los de la zona \texttt{NORTE}, luego los de la zona \texttt{CENTRO} y finalmente la zona \texttt{SUR}.
+
+Despues viene otro espacio en blanco, luego 31 guiones (-), otro espacio en blanco y finalmente la frase \textit{Altura promedio de volcanes: \texttt{prom}}, donde \texttt{prom} es el la altura promedio truncada al entero.
+
+Le piden crear las siguientes funciones:
+
+\begin{enumerate}
+	\item \texttt{mas\_alto(archivo, tipo)}, la cual recibe el nombre del \texttt{archivo} y el string de \texttt{tipo}, el cual puede ser \texttt{VOLCAN} o \texttt{CERRO}. Esta funcion retorna la \textbf{tupla} (nombre, altura), la cual corresponde al mas alto que coincida con el \texttt{tipo}. Si no hay mas alto, debera retornar una tupla con un string vacio y un cero.
+
+	\item \texttt{agregar\_volcan(archivo, nombre, datos)}, la cual recibe el nombre del archivo, el nombre del volcan, y una lista con la zona, tipo y altura de este. Esta funcion debe \textbf{modificar el archivo}, de modo que agregue el nuevo volcan en el archivo, respetando el orden de \texttt{zona}. Ademas debe actualizar la altura promedio. Se recomienda el uso de archivos temporales.
+
+	\item \texttt{actualizar\_volcan(archivo, nombre, datos)}, la cual recibe los mismos parametros que la funcion anterior. Esta funcion debe \textbf{modificar el archivo}, de tal forma que busque el volcan con el nombre \texttt{nombre}, y actualice su \texttt{tipo} y \texttt{altura}. Si el volcan \texttt{nombre} no se encuentra en el archivo, debe agregarlo a este. Recuerde que debe actualizar la altura promedio.
+
+	\item \texttt{eliminar\_mas\_alto(archivo)}. Recibe el nombre del archivo. Esta funcion \textbf{modifica el archivo}, de modo que borra el \texttt{VOLCAN} y el \texttt{CERRO} mas altos. Recuerde mantener la estructura del archivo y actualizar la altura promedio de los volcanes.
+\end{enumerate}
+
+Recuerde que puede usar funciones ya creadas.

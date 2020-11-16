@@ -1,0 +1,68 @@
+\section{Estadística PyPi}
+
+Considere la siguiente lista
+\begin{lstlisting}[style=consola]
+pi=[3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 9]
+\end{lstlisting}
+
+Programe las siguientes y divertidas funciones :D
+
+\begin{itemize}
+
+    \item[a.] \texttt{numeroEn(lista)} que reciba una lista de números enteros cualquiera y retorne otra estructura similar con los números que se encuentran en la lista original SIN REPETIR.
+    
+\begin{lstlisting}[style=consola]
+>>> [*numerosEn(pi)*]
+[3, 1, 4, 5, 9, 2, 6]
+\end{lstlisting}
+
+    \item[b.] \texttt{cuantasVeces(numero,lista)} que reciba un entero y una lista de enteros cualquiera, y retorne la cantidad de veces que se encuentra \texttt{numero} en \texttt{lista}.
+    
+\begin{lstlisting}[style=consola]
+>>> [*cuantasVeces(5,pi)*]
+3
+\end{lstlisting}
+
+    \item[c.] \texttt{moda(lista)} que reciba una lista cualquiera y retorne el número (o elemento) que se repita más veces dentro de la estructura.
+    
+\begin{lstlisting}[style=consola]
+>>> [*moda(pi)*]
+5
+\end{lstlisting}
+
+    \item[d.] \texttt{promedio(lista)} que reciba una lista cualquiera de enteros y retorne un flotante con la media aritmética de los números que la forman.
+    
+\begin{lstlisting}[style=consola]
+>>> [*promedio(pi)*]
+4.416666666666667
+\end{lstlisting}
+
+    \item[e.] \texttt{corte(lista)} que reciba una lista cualquiera de enteros y retorne una tupla con dos listas, una con los números que se encuentran por sobre el promedio y otra con los que están por debajo SIN REPETIR.
+
+\begin{lstlisting}[style=consola]
+>>> [*corte(pi)*]
+([5, 9, 6], [3, 1, 4, 2])
+\end{lstlisting}
+
+    \item[f.] \texttt{varianza(lista)} que reciba una lista cualquiera de enteros y retorne un flotante con el valor de la varianza $\sigma ^2$ de ellos. Entienda por varianza la siguiente fórmula
+    \begin{equation*}
+        \sigma^2=\frac{1}{n} \sum^{n}_{i=1} (X_{i} - \overline{X})^2
+    \end{equation*}
+    Donde $n$ es la cantidad de elementos de la lista, $X_i$ cada dato de la lista y $\overline{X}$ el promedio de los datos.
+    
+\begin{lstlisting}[style=consola]
+>>> [*varianza(pi)*]
+6.576388888888888
+\end{lstlisting}
+
+    \item[g.] \texttt{mapear(funcion,lista)} que reciba una función (que reciba un sólo parámetro entero) y una lista de enteros. Esta función retorna una lista, donde los elementos son los retornos de cada elemento de la lista original.
+
+\begin{lstlisting}[style=consola]
+>>> [*def cuadrado(x):*]
+	[*return x**2*]
+>>> [*mapear(cuadrado,pi)*]
+[9, 1, 16, 1, 25, 81, 4, 36, 25, 9, 25, 81]
+\end{lstlisting}
+    
+    
+\end{itemize}

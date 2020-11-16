@@ -1,0 +1,41 @@
+%%%Pregunta 3
+\section{Censo}
+
+Debido al Censo de Abril del 2017 el INE acudió a los estudiantes de programación para que los ayudara en ciertos aspectos. El INE, como resultado del censo, guardó sus datos en la siguiente estructura de datos, donde cada registro es un hogar censado (existen muchos más registros de los que se muestran):
+
+\begin{lstlisting}[style=consola]
+#censo = {calle_hogar: {numero_hogar: (nombre_censista, numero_personas,
+         (edades_personas))}}
+
+censo = {'calle 2 Oriente':
+            {'123': ('Soila Vecina', 3, (22, 50, 45)), 
+             '124': ('Soila Vecina', 2, (50, 52)),
+             '126': ('Aquiles Baeza', 2, (63, 53)), 
+             '125': ('Soila Vecina', 0, ())}, 
+         'calle Curico':
+            {'422': ('Aquiles Baeza', 2, (63, 53)),
+             '423': ('Aquiles Baeza', 4, (32, 40, 20, 16))}
+        }
+\end{lstlisting}
+
+El INE desea saber la cantidad promedio de personas que viven por cada calle, para así sacar estadísticas de densidad poblacional por sectores, sea poblaciones, comunas, provincias, etc. Esta información debe ser entregada de la siguiente forma (ejemplo):
+
+\begin{lstlisting}[style=consola]
+{'calle 2 Oriente': 2, 'calle Curico': 3}
+\end{lstlisting}
+
+El INE prometió un pago a los censistas, pero había una letra chica: ya que cada censista tenia asignado un cierto número de hogares, el INE pagará proporcional según el número de casas efectivamente censadas, ya que si no censaban ciertas casas, eso produciría un costo mayor post-censo que debía ser asumido por la Institución. El INE desea saber cuanto debe pagarle a cada censista según el número de hogares que logró efectivamente censar. Para esto, se tiene el nombre de cada censistas y sus metas en la siguiente estructura de datos (pueden ser muchos más):
+
+\begin{lstlisting}[style=consola]
+cencistas = {'Alan Brito': 15, 'Elba Liente': 3, 'Soila Vecina': 3, 
+'Aquiles Baeza': 4}
+\end{lstlisting}
+
+Usted debe entregar la información solicitada de la siguiente forma (ejemplo):
+
+\begin{lstlisting}[style=consola]
+{'Alan Brito': '0%', 'Elba Liente': '33%', 'Soila Vecina': '100%', 
+'Aquiles Baeza': '50%'}
+\end{lstlisting}
+
+\texttt{NOTA}: Como quizás se habrá dado cuenta, los hogares donde el número de personas es 0 (cero), significa que no se censó (sea por que el censista no llego a censar o por que no había moradores.)

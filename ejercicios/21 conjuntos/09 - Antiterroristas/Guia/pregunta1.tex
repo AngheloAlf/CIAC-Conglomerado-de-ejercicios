@@ -1,0 +1,66 @@
+%%%Pregunta 1
+\section{Anti-terroristas}
+
+El Comité Internacional Anti-Catástrofes ha estado teniendo problemas con su base de datos de terrorismo. Estos problemas son producidos debido a que este comité tiene una base de datos muy grande de terroristas... guardada en papel. Pero ellos se han dado cuenta de que los computadores podrían ayudarles para facilitarles su trabajo, lo han solicitado a usted como experto programador que es para que los ayude.
+
+El comité esta traspasando su base de datos a diccionarios de Python. Le han informado de que los avistamientos tendrán la siguiente estructura:
+
+\begin{lstlisting}[style=consola]
+terroristas = {314: [('Pentagono', '2010-05-02')],
+1234: [('Pentagono', '2010-05-02'), ('Torre Eiffel', '2004-08-26'), 
+('Area 51', '2001-09-11')], 
+9876: [('Casa Blanca', '2004-08-26')],
+700: [('Torre Eiffel', '2010-05-02'), ('Pentagono', '2011-06-08')], 
+2017: [('Torres Gemelas', '2001-09-11')]}
+\end{lstlisting}
+
+El cual es un diccionario, donde cada llave es el código que se le asigno al terrorista, y cada valor es una lista de tuplas que contiene donde ha sido visto y en que fecha.
+
+Además, le han informado de que habrá otra base de datos, la cual almacena las habilidades que se conocen de cada terrorista:
+
+\begin{lstlisting}[style=consola]
+habilidades = {9876: ['teletransportacion', 'Rayos X', 'Hacking'],
+2017: ['Aviones explosivos', 'Explosiones explosivas que explotan'], 
+1234: ['Explosivos', 'Hacking', 'Armas de fuego'], 
+700: ['Explosivos'], 
+314: ['Rayos laser', 'Rayos X', 'Armas de fuego']}
+\end{lstlisting}
+
+\begin{enumerate}
+\item Cree la función seConocen(terroristas, terro1, terro2); la cual recibe el diccionario de terroristas y el numero de 2 terroristas. Retorna \textbf{True} si ambos han sido vistos en algún lugar en común y en la misma fecha, o \textbf{False} si no hay registros de esto.
+
+\begin{lstlisting}[style=consola]
+>>> seConocen(terroristas, 1234, 314)
+True
+>>> seConocen(terroristas, 911, 700)
+False
+\end{lstlisting}
+
+\item Cree la función terroristasFecha(terroristas, fecha); la cual recibe el diccionario de terroristas y una fecha. Retorna un conjunto de terroristas que han sido avistados en esa fecha.
+
+\begin{lstlisting}[style=consola]
+>>> terroristasFecha(terroristas, '2010-05-02')
+set([1234, 700, 314])
+>>> terroristasFecha(terroristas, '2001-09-11')
+set([1234, 911])
+\end{lstlisting}
+
+\item Cree la función habilidadesUnicas(habilidades); la cual recibe el diccionario de habilidades, y retorna un diccionario cuya llave sera el código de cada terrorista, y su valor sera un conjunto de sus habilidades, las cuales deben ser habilidades que ningún otro terrorista posea. Si el terrorista no posee habilidades únicas, debe existir en este diccionario, pero con un conjunto vació asociado.
+
+\begin{lstlisting}[style=consola]
+>>> habilidadesUnicas(habilidades)
+{9876: set(['Teletransportacion']), 1234: set([]), 700: set([]), 
+314: set(['Rayos laser']), 911: set(['Explosiones explosivas que explotan', 
+'Aviones explosivos'])}
+\end{lstlisting}
+
+\item Cree la función terroristasPeligrosos(terroristas, habilidades), la cual recibe los diccionarios de terroristas y de habilidades, y retorna un diccionario, el cual su llave son solo los terroristas que poseen habilidades únicas, y su valor es \textbf{True} si no se conoce con ningún otro terrorista, y \textbf{False} en caso contrario.
+
+\begin{lstlisting}[style=consola]
+>>> terroristasPeligrosos(terroristas, habilidades)
+{314: False, 9876: True, 911: True}
+\end{lstlisting}
+
+\end{enumerate}
+
+\textbf{Nota}: Como buen programador que es usted, ya habrá recordado que puede reutilizar funciones que ya ha creado en otras funciones.

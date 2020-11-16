@@ -1,0 +1,91 @@
+\section*{Conversor}
+
+  La Oficina de Asuntos Internacionales de la Universidad ha hecho un buen trabajo
+  generando convenios de intercambio con diferentes universidades de Estados Unidos.
+  Uno de los programas más recientes tiene el objetivo de realizar un intercambio,
+  de alumnos de primer año, durante el segundo semestre.
+  
+  Para realizar la postulación,
+  la universidad de destino pide un resumen de notas de los postulantes,
+  pero dicho formato es diferente al usado en la USM,
+  por lo que una conversión es necesaria.
+  
+  Las conversiones obedecen a las siguientes reglas:
+  \begin{itemize}
+  \item Si \(nota \ge 90\), se obtiene una nota convertida A.
+  \item Si \(nota \ge 70\) y \(< 90 \), se obtiene una nota convertida B.
+  \item Si \(nota \ge 55\) y \(< 70 \), se obtiene una nota convertida C.
+  \item Si \(nota < 55\), se obtiene una nota convertida F.
+  \end{itemize}
+  
+  Para confeccionar el resumen de notas,
+  además de las notas convertidas,
+  se necesita el promedio ponderado de las notas convertidas
+  llamado GPA según sus siglas en inglés.
+  
+  Para calcular el GPA,
+  primero se procede a convertir las notas
+  según la siguiente tabla de conversión.
+  
+  \begin{table}[H]
+    \begin{tabular}{c|c|c|c|c}
+      \toprule
+      Nota EE.UU. & A & B & C & F \\
+      \midrule
+      Puntos GPA  & 4.0 & 3.0 & 2.0 & 0.0  \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  
+  Después de obtener los puntos GPA correspondientes a cada asignatura,
+  se procede a calcular el promedio ponderado por los créditos de las 2 asignaturas
+  con mejor nota (PGPA),
+  entre los ramos "Programación" (3 créditos),
+  "Matemática I" (5 créditos) e "Introducción a la Física" (3 créditos).
+  
+  \begin{equation*}
+    PGPA = \frac{GPA_1 \cdot C_1 + GPA_2 \cdot C_2}{C_1 + C_2}
+  \end{equation*}
+  
+  Donde \(GPA_1\) y \(GPA_2\) corresponden a las 2 mejores notas como puntos GPA
+  y \(C_1\) y \(C_2\) a sus créditos respectivamente.
+    
+  \pagebreak[4]
+  
+  Ahora usted debe:
+  
+  \begin{itemize}
+  \item[a)]
+    Desarrollar la función \texttt{convertir\_eeuu(nota)}
+    que recibe como parámetro una nota en escala 0 -- 100 y retorne la nota
+    en formato EE.UU.
+    
+    \begin{lstlisting}[style=consola]
+    >>> convertir_eeuu(80)
+    'B'
+    \end{lstlisting}
+  \item[b)]
+    Desarrollar la función \texttt{convertir\_gpa(nota)}
+    que recibe como parámetro una nota en formato EE.UU.
+    y retorne la nota en puntos GPA.
+    
+    \begin{lstlisting}[style=consola]
+    >>> convertir_gpa('F')
+    0.0
+    \end{lstlisting}
+  \item[c)]
+    Escriba un programa en el cual se ingresen las notas
+    de las 3 asignaturas mencionadas e imprima en pantalla
+    las notas convertidas al formato de EE.UU.
+    y el PGPA.
+    
+    \begin{lstlisting}[style=consola]
+    Nota de Programacion: [*80*]
+    EE.UU: B
+    Nota de Matematica: [*60*]
+    EE.UU: C
+    Nota de Fisica: [*95*]
+    EE.UU: A
+    PGPA: 3.5
+    \end{lstlisting}
+  \end{itemize}

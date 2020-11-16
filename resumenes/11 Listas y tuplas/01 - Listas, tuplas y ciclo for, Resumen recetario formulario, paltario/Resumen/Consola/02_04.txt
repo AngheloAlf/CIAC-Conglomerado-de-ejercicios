@@ -1,0 +1,2 @@
+lista.sort() #Ordena de menor a mayor la lista, RETORNA NONE
+lista.reverse() #Invierte el orden de los elementos RETORNA NONE

@@ -1,0 +1,2 @@
+lista.append(dato) #o si lista ya esta creada
+lista = lista + [dato]

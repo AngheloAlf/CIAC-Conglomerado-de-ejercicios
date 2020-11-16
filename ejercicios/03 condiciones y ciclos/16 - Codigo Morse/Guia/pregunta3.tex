@@ -1,0 +1,37 @@
+\section{Código Morse}
+
+Usted está programando un robot que pretende realizar un viaje interestelar. Su intuición le dice que debería enseñarle a transformar números normales del sistema decimal a código morse (sistema de representación de letras y números mediante señales intermitentes).
+
+Para ello, usted creará una función \texttt{transformar(numero)} que reciba un número de tipo \texttt{int} y retorne una cadena o \texttt{str} con el código morse respectivo, donde \texttt{o} es punto y \texttt{-} es raya.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{1} & o - - - -  & \textbf{6}  & - o o o o \\ \hline
+\textbf{2} & o o - - -  & \textbf{7}  & - - o o o \\ \hline
+\textbf{3} & o o o - -  & \textbf{8}  & - - - o o \\ \hline
+\textbf{4} & o o o o -  & \textbf{9}  & - - - - o \\ \hline
+\textbf{5} & o o o o o  & \textbf{10} & - - - - - \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{lstlisting}[style=consola]
+>>> [*transformar(7)*]
+'--ooo'
+
+>>> [*for numero in range(10):*]
+	[*print numero, transformar(numero)*]
+
+	
+0 -----
+1 o----
+2 oo---
+3 ooo--
+4 oooo-
+5 ooooo
+6 -oooo
+7 --ooo
+8 ---oo
+9 ----o
+\end{lstlisting}

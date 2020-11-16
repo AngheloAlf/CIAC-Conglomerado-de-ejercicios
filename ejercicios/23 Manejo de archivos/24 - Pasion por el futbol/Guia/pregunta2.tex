@@ -1,0 +1,35 @@
+\section{Pasión por el fútbol}
+
+Para el campeonato de fútbol pronto a jugar en la universidad, CIAC inscribirá a su equipo Ni por CIACaso. El único problema es que existen muchos jugadores y equipos dentro de la unidad, por lo que se jugó un campeonato interno para elegir al equipo más bueno.
+ \\ \\
+Los datos de los partidos jugados en la copa CIAC se guardan en un archivo de texto donde cada línea tiene los resultados de la forma \texttt{equipo\_1;equipo\_2;marcador\_1;marcador\_2}. 
+\\ \\
+Esto es sumamente difícil de leer por lo que se le pide a usted ayudar en manejar estos datos.
+\\ \\
+Se quiere hacer un diccionario cuyas llaves sean los nombres de equipos y cuyos valores sean tuplas de la forma (PJ,PG,PP,PE,Pts) donde PJ son partidos jugados, PG partidos ganados, PP partidos perdidos, PE partidos empatados y Pts los puntos obtenidos. Entiéndase que por cada partido ganado se suman 3 puntos, por empatado 1 punto y ninguno por partido perdido.
+\\ \\
+El archivo es el siguiente:
+
+\begin{lstlisting}[style=consola]
+Archivo: resultados.txt
+===================
+progra;matfis;1;2
+matfis;quimica;3;2
+progra;matfis;5;2
+matfis;quimica;1;5
+matfis;quimica;0;3
+matfis;progra;0;3
+quimica;progra;2;3
+progra;quimica;5;3
+quimica;matfis;4;1
+\end{lstlisting}
+
+Ayudaría mucho que el programa imprima los datos de la siguiente manera
+
+\begin{lstlisting}[style=consola]
+EQUIPO: (PJ,PG,PP,PE,PTS)
+========================
+quimica: (6, 3, 3, 0, 9)
+matfis: (7, 2, 5, 0, 6)
+progra: (5, 4, 1, 0, 12)
+\end{lstlisting}

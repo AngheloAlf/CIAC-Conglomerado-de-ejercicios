@@ -1,0 +1,146 @@
+\section*{Uso de Archivos: Registro de Donantes}
+
+  Una institución de beneficencia
+  maneja un registro de personas que han hecho donaciones
+  mediante un \emph{archivo} de registros llamado
+  \texttt{donaciones.txt}.
+  
+  El archivo está ordenado por rut
+  de menor a mayor.
+  Para simplificar,
+  se supondrá que los rut son de cinco dígitos
+  y no incluyen el dígito verificador
+  (el número que sigue al guión).
+  
+  Un ejemplo de archivo es el siguiente:
+  
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+      \toprule
+      Rut   & Nombre                & Monto \\
+      \midrule
+      15274 & Fulana de Tal      & 200   \\
+      15891 & Jean Dupont        & 150   \\
+      16433 & Erika Mustermann   & 400   \\
+      16504 & Perico los Palotes & 80    \\
+      17004 & Jan Kowalski       & 200   \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  
+  Escriba las funciones que se piden a continuación:
+  \begin{enumerate}
+  \item
+    Programe la función 
+    \texttt{crear\_archivo(donantes)}
+    que cree un archivo con los datos de la tabla.
+    El argumento \texttt{donantes} es una lista
+    con los datos,
+    por ejemplo:
+    
+    \begin{lstlisting}[style=consola]
+    > donantes = [(15274, 'Fulana de Tal'     , 200),
+                  (15891, 'Jean Dupont'       , 150),
+                  (16443, 'Erika Mustermann'  , 400),
+                  (16504, 'Perico los Palotes',  80),
+                  (17004, 'Jan Kowalski'      , 200)] 
+    \end{lstlisting}
+    Para el archivo,
+    utilice un caracter separador al ingresar los datos:
+    
+    \begin{lstlisting}[style=consola]
+    # ejemplo de archivo donantes.txt:
+    15274:Fulana de Tal:200
+    15891:Jean Dupont:150
+    16443:Erika Mustermann:400
+    16504:Perico los Palotes:80
+    17004:Jan Kowalski:200
+    \end{lstlisting}
+  \item
+    Escriba la función
+    \texttt{mostrar\_datos(nombre\_archivo)},
+    que muestre los datos del archivo
+    como se muestra en el ejemplo:
+    
+    \begin{lstlisting}[style=consola]
+    > mostrar_datos('donantes.txt')
+    ==============================
+    = Contenido archivo donantes = 
+    ==============================
+
+    |rut   |nombre              |donacion
+    |15274 |Fulana de Tal       |200
+    |15891 |Jean Dupont         |150
+    |16443 |Erika Mustermann    |400
+    |16504 |Perico los Palotes  |80
+    |17004 |Jan Kowalski        |200
+    \end{lstlisting}
+  \pagebreak[4]
+  \item
+    Escribir la función
+    \texttt{monto\_donado(rut, nombre\_archivo)},
+    que utilice el rut de una persona e identifique
+    la cantidad donada a la institución.
+    A continuación se muestra un ejemplo:
+    
+    \begin{lstlisting}[style=consola]
+    > monto_donado(17004, 'donantes.txt')
+    ============
+    = Donacion =
+    ============
+
+    |persona             |Donacion
+    |Jan Kowalski        |200
+    \end{lstlisting}
+  \item
+    Escribir la función
+    \texttt{eliminar\_donante(rut, nombre\_archivo)},
+    que busque al donante con el rut solicitado 
+    y lo elimine del archivo.
+    
+    \begin{lstlisting}[style=consola]
+    > eliminar_donante(16504, 'donantes.txt')
+    ========================
+    = Eliminacion donantes =
+    ========================
+
+    |rut   |nombre
+    |16504 |Perico los Palotes  
+    \end{lstlisting}
+    
+    \begin{lstlisting}[style=consola]
+    > # Archivo resultante:
+    > mostrar_datos('donantes.txt')
+    ==============================
+    = Contenido archivo donantes =
+    ==============================
+
+    |rut   |nombre              |donacion
+    |15274 |Fulana de Tal       |200
+    |15891 |Jean Dupont         |150
+    |16443 |Erika Mustermann    |400
+    |17004 |Jan Kowalski        |200
+    \end{lstlisting}
+  \item
+    Escribir la función
+    \texttt{agregar\_donante(rut, nombre, donacion, nombre\_archivo)},
+    que ingrese al usuario identificado por los datos argumento
+    al archivo de registros:
+    
+    \begin{lstlisting}[style=consola]
+    > agregar_donante(18324, 'Pablo Inzunza', 100, 'donantes.txt')
+    > mostrar_datos('donantes.txt')
+    ==============================
+    = Contenido archivo donantes =
+    ==============================
+
+    |rut   |nombre              |donacion
+    |15274 |Fulana de Tal       |200
+    |15891 |Jean Dupont         |150
+    |16443 |Erika Mustermann    |400
+    |16504 |Perico los Palotes  |80
+    |17004 |Jan Kowalski        |200
+    |18324 |Pablo Inzunza       |100
+    \end{lstlisting}
+  \end{enumerate}

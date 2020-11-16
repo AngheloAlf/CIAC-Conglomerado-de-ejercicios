@@ -1,0 +1,4 @@
+>>> for i in c.values():
+        print(i)
+Miguel
+Persona

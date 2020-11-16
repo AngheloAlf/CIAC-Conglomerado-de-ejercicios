@@ -1,0 +1,49 @@
+% \pagebreak[4]
+\section{Listas y Tuplas}
+
+  Eduardo es aficionado a los juegos de cartas
+  utilizando naipe inglés.
+  Como no tiene mucho tiempo para reunirse con sus amigos
+  a jugar debido a su horario de trabajo decide
+  que sería una buena idea jugar en línea.
+  Para ello solicita una herramienta de apoyo
+  para gestionar la baraja utilizando Python.
+  
+  \paragraph{Ejercicio}
+  Para ayudar a Eduardo resuelva los siguientes problemas.
+  
+  \begin{enumerate}
+  \item
+    Programe la función \texttt{nueva\_baraja()}
+    que retorne una lista con tuplas de la forma
+    \texttt{(palo, numero)},
+    por ejemplo \texttt{('trebol', '2')}.
+  \item
+    Programe la función \texttt{robar(baraja)}
+    que retorne los datos de la primera carta de la baraja.
+  \item
+    Programe la función \texttt{barajar(baraja)}
+    que retorne una nueva baraja a partir de la primer,
+    con las cartas alineadas al azar
+    (pista: puede utilizar
+    funciones aleatorias como \texttt{random} y \texttt{choice}.
+  \item
+    Programe la función \texttt{entregar\_mano(baraja, cartas)}
+    que retorne una lista con las primeras cartas de la baraja.
+    El número de cartas robadas corresponde a la variable \texttt{cartas}.
+  \item
+    Escriba un programa que cree una baraja y pida un número de jugadores.
+    Para cada jugador,
+    el programa debe barajar las cartas y entregar una mano,
+    luego debe entregar el total de cartas de cada palo en la mano.
+    
+    \begin{lstlisting}[style=consola]
+    Ingrese numero jugadores: [*1*]
+    Ingrese numero cartas por mano: [*5*]
+    mano jugador 1:
+    pica: 3
+    corazon: 1
+    diamante: 1
+    trebol: 0
+    \end{lstlisting}
+  \end{enumerate}

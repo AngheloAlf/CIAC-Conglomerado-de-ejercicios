@@ -1,0 +1,35 @@
+\section{Rey programador: Pregunta 3 C2 2016-2}
+En una tierra lejana, de una tierra lejana, se tiene la tradición de que los padres enseñan a sus hijos a programar. Generalmente, el hijo de un programador programa mucho mejor que su padre, por lo que mientras más generaciones ascendentes de programadores tenga un sujeto, mejor programador es.
+
+Se necesita determinar al rey de los tutores de programación entre los miembros de 5 poderosas familias muy buenas para programar. Cada ayudante (vivo o muerto) con descendencia es almacenada en un diccionario, donde la llave es el nombre del sujeto y como valor el conjunto de nombres de sus hijos. Un \textbf{ejemplo reducido} sería el siguiente diccionario:
+
+\begin{lstlisting}[style=consola]
+hijos = {
+'Tywin': set(['Tyron', 'Jaime', 'Cersei']),
+'Jaime': set(['Joffrey', 'Myrcella', 'Tommen','Miguel']),
+'Cersei': set(['Joffrey', 'Myrcella', 'Tommen','Miguel']),
+'Eddard': set(['Robb', 'Sansa', 'Arya', 'Brandon', 'Rickon', 'Jon']),
+'Catelyn': set(['Robb', 'Sansa', 'Arya', 'Brandon', 'Rickon']),
+# ...
+}
+\end{lstlisting}
+
+Cada individuo es hijo de un padre y una madre, si uno de estos no se encuentra en el diccionario es porque o no era parte de la nobleza o no hay registros. Todo hijo de padre y/o madre noble es por herencia noble.
+
+Además se tiene un conjunto con los nombres de todos los nobles muertos desde que existe registro
+
+\begin{lstlisting}[style=consola]
+muertos = set(['Tywin', 'Tommen','Myrcella'])
+\end{lstlisting}
+
+Ahora usted debe ayudar a determinar al siguiente rey entregando una lista con todos los candidatos de linaje más puro que aún están con vida. Un linaje es más puro mientras más cantidad de generaciones nobles tiene. Como ejemplo, el linaje de Joffrey tiene 3 generaciones; la
+de el, la de sus padres (Jaime y Cersei) y la de su abuelo (Tywin).
+
+Cree la función \texttt{candidatos(hijos, muertos)} que recibe las dos estructuras anteriormente descritas y entrega como resultado una lista con todos los candidatos que aun están vivos. Para el ejemplo esta sería:
+
+\begin{lstlisting}[style=consola]
+[*>>> candidatos(hijos,muertos)*]
+['Miguel', 'Joffrey']
+\end{lstlisting}
+
+Recuerde que puede crear todas las funciones auxiliares que desee.

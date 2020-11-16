@@ -1,0 +1,25 @@
+\section{Ordenando}
+
+El siguiente codigo esta desordenado y sin indentar, su misión sera ordenarlo de modo que el codigo haga lo que su descripción dice.
+
+\begin{itemize}
+
+\item Ordene la funcion \texttt{promedio\_ramo(archivo, ramo)}, la cual recibe el nombre de un archivo y el nombre de un ramo. La estructura del archivo es \texttt{nombre\_alumno;ramo;nota1,nota2,...}. La funcion retorna el promedio de notas de \texttt{ramo}.
+
+\begin{lstlisting}[style=consola]
+for linea in arch:
+sumaNotas += float(nota)
+return sumaNotas/total
+notas = linea[-1].split(";")
+arch = open(archivo)
+def promedio_ramo(archivo, ramo):
+total = 0.0
+arch.close()
+total += 1.0
+sumaNotas = 0.0
+for nota in notas:
+linea = linea.strip().split("#")
+if linea[1] == ramo:
+\end{lstlisting}
+
+\end{itemize}

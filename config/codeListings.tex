@@ -1,0 +1,153 @@
+\usepackage{listings}
+\usepackage{newfloat}
+\usepackage{adjustbox}
+
+\renewcommand{\lstlistingname}{Código}
+
+% Archivo de texto plano
+\lstdefinestyle{archivo}{
+  backgroundcolor=\color{white},
+  frame=none,
+  %basicstyle=\small\normalfont, 
+  %basicstyle=\normalfont,
+  basicstyle=\small\ttfamily,
+  %basicstyle=\small\fontfamily{cmr}\selectfont,
+  %basicstyle=\fontfamily{fvm}\selectfont,
+  %basicstyle=\small\mdseries,
+  %basicstyle=\small\textsf,
+  %basicstyle=\small\fontfamily{put}\selectfont,
+  %basicstyle=\small\ttfamily,
+  %basicstyle=\fourier,
+  %basicstyle=\footnotesize,
+  %moredelim=[is][\bfseries]{[*}{*]},
+  xrightmargin=5pt,
+  %keepspaces=true,
+  tabsize=2,
+  columns=fixed
+}
+
+% Consola
+\lstdefinestyle{consola}{
+  backgroundcolor=\color{bggray},
+  basicstyle=\small\ttfamily,
+  frame=single,
+  moredelim=[is][\bfseries]{[*}{*]},
+  xrightmargin=5pt,
+  tabsize=2
+}
+
+% Python
+\lstdefinestyle{mypy}{
+  language=python,
+  backgroundcolor=\color{bggray},
+  basicstyle=\ttfamily\small\color{orange!70!black},
+  frame=L,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{red},
+  numbers=left,
+  showstringspaces=false,
+  xrightmargin=5pt,
+  xleftmargin=10pt,
+  tabsize=2
+}
+
+
+% Python simple
+\lstdefinestyle{pythonSimple}{
+  language=python,
+  backgroundcolor=\color{bggray},
+  basicstyle=\ttfamily\small\color{black!70!black},
+  %frame=L,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{red},
+  showstringspaces=false,
+  %xrightmargin=0pt,
+  %xleftmargin=0pt,
+  tabsize=44,
+  otherkeywords={>>> },
+  breaklines=true,
+  columns=fullflexible,
+  linewidth=\columnwidth
+}
+
+%%%% Esto lo agregó Miguel para los códigos en VBA de INF130
+\lstdefinestyle{VBAStyle}{
+  language={[Visual]Basic},
+  backgroundcolor=\color{bggray},
+  basicstyle=\ttfamily\small\color{black!70!black},
+  %frame=L,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{red},
+  showstringspaces=false,
+  xrightmargin=0pt,
+  xleftmargin=0pt,
+  tabsize=2,
+  otherkeywords={>>> }
+}
+%%%%%% Fin de agregado 23/09/2020
+
+
+% \inputArchivo{rutaArchivo}[nombreParaMostrar]{ruta/al/archivo.txt}
+% Agrega un archivo de texto plano desde la ruta especificada.
+% El argumento `nombreParaMostrar` es opcional.
+\newcommand{\inputArchivo}[2][]%
+{
+\begin{center}
+    \begin{tabular}{|l|}
+        \multicolumn{1}{c}{\texttt{#1}}\\
+	    \hline
+	    \lstinputlisting[style=archivo]{#2}\\
+		\hline
+    \end{tabular}
+\end{center}
+}
+
+
+% \inputArchivoNumerado{rutaArchivo}[nombreParaMostrar]{ruta/al/archivo.txt}
+% Agrega un archivo de texto plano desde la ruta especificada, y agrega el número de cada linea a un costado.
+% El argumento `nombreParaMostrar` es opcional.
+\newcommand{\inputArchivoNumerado}[2][]%
+{
+\begin{center}
+    \begin{tabular}{|l|}
+        \multicolumn{1}{c}{\texttt{#1}}\\
+	    \hline
+	    \lstinputlisting[style=archivo,numbers=left]{#2}\\
+		\hline
+    \end{tabular}
+\end{center}
+}
+
+% \inputConsola{ruta/al/archivo}
+% Muestra un archivo de texto con el formato consola
+\newcommand{\inputConsola}[1]{\lstinputlisting[style=consola]{#1}}
+
+
+% \inputPython{ruta/al/archivo}{nombreParaMostrar}
+% Muestra un archivo con formato Python.
+% Agrega numeración a las líneas y tiene como encabezado "Código X: nombreParaMostrar".
+\newcommand{\inputPython}[2]%
+{
+\lstinputlisting[style=mypy, caption=\texttt{#2}] {#1}
+}
+
+
+% \inputPythonSimple{ruta/al/archivo}
+% Muestra un archivo con formato Python
+\newcommand{\inputPythonSimple}[1]%
+{
+\lstinputlisting[style=pythonSimple] {#1}
+}
+
+%%%% Se agrega función para agregar VBA como comando
+
+\newcommand{\inputVBA}[2]
+{
+\lstinputlisting[style=VBAStyle, caption=\texttt{#2}] {#1}
+}

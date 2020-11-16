@@ -1,0 +1,5 @@
+cadena='Programacion'
+contador=0
+while contador<len(cadena):
+    print(cadena[contador], end="")
+    contador+=1

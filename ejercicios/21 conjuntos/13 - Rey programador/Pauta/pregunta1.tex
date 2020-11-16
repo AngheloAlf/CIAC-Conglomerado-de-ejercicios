@@ -1,0 +1,13 @@
+\section{Rey programador}
+
+Para este problema es importante hacer un esquema de lo que se quiere lograr con cada función auxiliar. 
+\begin{itemize}
+    \item Se crea un conjunto con el nombre de todos los posibles candidatos, para preguntar individualmente cuantas generaciones de programadores tiene.
+    \item Seguido de esto, se crea un diccionario nuevo, con la misma estructura, pero ahora la llave es el nombre de un hijo y el valor un conjunto de padres.
+    \item Se crea una función ascendencia para calcular cuantas generaciones tiene cierta persona.
+    \item Finalmente, se crea un algoritmo de optimización, donde se retorna una lista con los mejores candidatos y se quitan los elementos que están en el conjunto de \texttt{muertos}.
+\end{itemize}
+
+\lstinputlisting[
+    style = mypy,
+    caption = \texttt{pauta\_rey.py}]{Code/pauta_rey.py}
