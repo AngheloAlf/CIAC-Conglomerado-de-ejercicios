@@ -1,7 +1,8 @@
 def suscritosPorCategoria(listas, categoria):
     total = 0
 
-    for tipo, datos in listas.items():
+    for tipo in listas:
+        datos = listas[tipo]
         # Desampaquetamos la tupla datos. Como no  nos interesa el 
         # segundo valor de la tupla, usamos un guion bajo para 
         # desempaquetarlo, explicitando que no nos interesa.

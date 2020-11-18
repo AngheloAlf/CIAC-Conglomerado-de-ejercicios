@@ -1,0 +1,6 @@
+>>> print(suscritosPorCategoria(listasCorreos, 'A'))
+150
+>>> print(suscritosPorCategoria(listasCorreos, 'B'))
+420
+>>> print(suscritosPorCategoria(listasCorreos, 'C'))
+400

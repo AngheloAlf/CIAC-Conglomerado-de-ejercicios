@@ -1,0 +1,3 @@
+>>> print(vistaCategoria(listasCorreos))
+{'A': [2, ['profesores', 'mechones']], 'C': [1, ['practicas']],
+'B': [2, ['postgrado', 'pregrado']]}
