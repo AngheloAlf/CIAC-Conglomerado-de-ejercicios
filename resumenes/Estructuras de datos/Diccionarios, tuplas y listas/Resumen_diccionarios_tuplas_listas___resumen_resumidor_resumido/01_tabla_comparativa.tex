@@ -1,0 +1,23 @@
+\begin{center}
+	\begin{tabular}{|A{2.5cm}|S{4.2cm}|S{4cm}|S{4.4cm}|}
+	\hline
+	Acción & Listas & Tuplas & Diccionarios \\
+	\hline
+	Particularidad & Lista mutable de datos ordenados. & Lista inmutable de datos ordenados. & Asociación de pares, llaves y valores. \newline Llaves únicas. \\
+	\hline
+	Crear & \texttt{lista = list()} \newline \texttt{lista = []} \newline \texttt{lista = [x, y, z]} & \texttt{tupla = (x, y, z)} & \texttt{dicc = dict()} \newline \texttt{dicc = \{\}} \\
+	\hline
+	Agregar elementos & \texttt{lista.append(x)} \newline \texttt{lista.insert(i, x)} & No se llama. & \texttt{dicc[llave] = valor} \\
+	\hline
+	Concatenación & \texttt{lista += otraLista} & \texttt{a = tupla + otraTupla} & No se llama. \\
+	\hline
+	Obtener elementos & \texttt{a = lista[i]} & \texttt{b = tupla[i]} & \texttt{c = dicc[llave]} \\
+	\hline
+	Reemplazar elementos & \texttt{lista[i] = a} & No se llama. & \texttt{dicc[llave] = c} \\
+	\hline
+	Eliminar elementos & \texttt{lista.remove(x)} \newline \texttt{del lista[i]} & No se llama. & \texttt{del dicc[llave]} \\
+	\hline
+	Funciones especiales & Ordenar crecientemente: \texttt{lista.sort()} \newline Invertir: \texttt{lista.reverse()} \newline Índice: \texttt{lista.index(x)} & No. & Lista de llaves: \texttt{dicc.keys()} \newline Lista de valores: \texttt{dicc.values()} \newline Lista de tuplas de llave y valor: \texttt{dicc.items()} \\
+	\hline
+	\end{tabular}
+\end{center}
