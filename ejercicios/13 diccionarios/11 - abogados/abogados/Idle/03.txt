@@ -1,0 +1,2 @@
+>>> print(quien_trabajo(abogados, 'google'))
+['mike', 'rachel']

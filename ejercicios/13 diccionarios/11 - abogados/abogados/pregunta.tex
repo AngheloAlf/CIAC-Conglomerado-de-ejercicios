@@ -1,0 +1,25 @@
+\section{Abogados}
+
+Pearson Hardman, una firma muy prestigiosa de abogados, requiere ayuda con el manejo de datos de sus empleados. Teniendo el diccionario \texttt{abogados} cuyas llaves son nombres y sus valores otros diccionarios. Estos diccionarios asociados a cada abogado contienen datos de:
+\begin{itemize}
+    \item Los juicios realizados por mes, bajo la llave \texttt{'juicios'} que asocia una lista de tuplas con la forma \texttt{(mes,cantidad)}
+    \item El sueldo que gana por hora el abogado, bajo la llave \texttt{'sueldo'} que asocia un entero
+    \item Las empresas que ha defendido el abogado bajo la llave \texttt{'empresas'} que asocia una lista de strings
+\end{itemize}
+
+\inputPythonSimple{abogados/Code/diccionario_abogados.py}
+
+Se le pide a usted crear las siguientes funciones
+\begin{itemize}
+    \item[a.] \texttt{juicios\_por\_mes(abogados)} que reciba el diccionario \texttt{abogados} y retorne un diccionario que asocie el mes con la cantidad total de juicios realizados.
+    \inputPythonSimple{abogados/Idle/01.txt}
+
+    \item[b.] \texttt{total\_juicios(abogados, nombre)} que reciba el nombre de un abogado y retorne un entero con la cantidad total de juicios en los que ha estado.
+    \inputPythonSimple{abogados/Idle/02.txt}
+    
+    \item[c.] \texttt{quien\_trabajo(abogados, empresa)} que reciba un string con una empresa y retorne una lista con todos los nombres de los abogados que trabajaron en dicha empresa.
+    \inputPythonSimple{abogados/Idle/03.txt}
+
+    \item[d.] \texttt{se\_conocen(abogados, abogado\_1,abogado\_2)} que retorne un valor booleano si es que ambos abogados se conocen. Considere que se conocen si es que han trabajado en la misma empresa.
+    \inputPythonSimple{abogados/Idle/04.txt}
+\end{itemize}

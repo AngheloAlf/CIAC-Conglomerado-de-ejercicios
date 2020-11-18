@@ -1,0 +1,3 @@
+>>> print(juicios_por_mes(abogados))
+{'julio': 35, 'agosto': 1, 'octubre': 4, 'enero': 8, 'marzo': 4, 
+'febrero': 12}

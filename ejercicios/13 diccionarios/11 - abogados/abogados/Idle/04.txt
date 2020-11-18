@@ -1,0 +1,4 @@
+>>> print(se_conocen(abogados, 'mike', 'rachel'))
+True
+>>> print(se_conocen(abogados, 'rachel', 'harvey'))
+False
